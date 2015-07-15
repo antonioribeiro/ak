@@ -1508,12 +1508,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:antonioribeiro/sdk.git",
-                "reference": "4a1fb9a4079427f105c85ecab5b2d70ceea3b36c"
+                "reference": "70ad24c9e9d581daa61ee388da811c43deede6a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antonioribeiro/sdk/zipball/4a1fb9a4079427f105c85ecab5b2d70ceea3b36c",
-                "reference": "4a1fb9a4079427f105c85ecab5b2d70ceea3b36c",
+                "url": "https://api.github.com/repos/antonioribeiro/sdk/zipball/70ad24c9e9d581daa61ee388da811c43deede6a7",
+                "reference": "70ad24c9e9d581daa61ee388da811c43deede6a7",
                 "shasum": ""
             },
             "require": {
@@ -1566,7 +1566,7 @@
                 "source": "https://github.com/antonioribeiro/sdk/tree/laravel5.1",
                 "issues": "https://github.com/antonioribeiro/sdk/issues"
             },
-            "time": "2015-06-13 15:59:48"
+            "time": "2015-07-15 12:32:15"
         },
         {
             "name": "pragmarx/support",
