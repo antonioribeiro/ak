@@ -1,12 +1,6 @@
+*~
 /vendor
 /node_modules
 Homestead.yaml
 .env
-
-.idea/.name
-.idea/workspace.xml
-.idea/modules.xml
-.idea/vcs.xml
-.idea/misc.xml
-.idea/ak.iml
-.idea/blade.xml
+.idea/
