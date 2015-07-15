@@ -6,7 +6,9 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
-        "laravel/framework": "5.1.*"
+        "laravel/framework": "5.1.*",
+        "pragmarx/sdk": "dev-laravel5.1",
+        "pragmarx/tracker": "dev-master as 1.0.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -14,6 +16,12 @@
         "phpunit/phpunit": "~4.0",
         "phpspec/phpspec": "~2.1"
     },
+    "repositories": [
+      {
+        "type": "vcs",
+        "url":  "https://github.com/antonioribeiro/sdk.git"
+      }
+    ],
     "autoload": {
         "classmap": [
             "database"

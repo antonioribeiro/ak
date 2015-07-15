@@ -144,6 +144,10 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * My Providers
+         */
+        PragmaRX\Sdk\ServiceProvider::class
     ],
 
     /*
