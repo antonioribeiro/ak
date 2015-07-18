@@ -5,7 +5,7 @@ Route::get('/', function()
 	return view('comingsoon');
 });
 
-Route::group(['middleware' => 'auth', 'prefix' => 'i'], function()
+Route::group(['middleware' => 'auth', 'prefix' => 'beta'], function()
 {
 	Route::group(['namespace' => 'App\Services\Home\Http\Controllers'], function()
 	{
