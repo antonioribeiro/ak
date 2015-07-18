@@ -850,12 +850,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "3d8146a58232d6a69818e9d2c2d2b18660b0fc33"
+                "reference": "c8c5075a3133ae11c7e170cec7586e20c9d92bc7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/3d8146a58232d6a69818e9d2c2d2b18660b0fc33",
-                "reference": "3d8146a58232d6a69818e9d2c2d2b18660b0fc33",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/c8c5075a3133ae11c7e170cec7586e20c9d92bc7",
+                "reference": "c8c5075a3133ae11c7e170cec7586e20c9d92bc7",
                 "shasum": ""
             },
             "require": {
@@ -970,7 +970,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-07-18 02:58:14"
+            "time": "2015-07-18 19:12:15"
         },
         {
             "name": "league/flysystem",
@@ -1553,13 +1553,13 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "git@github.com:antonioribeiro/sdk.git",
-                "reference": "3526c5712960d4b9491de0216f65193a7e53ade6"
+                "url": "https://github.com/antonioribeiro/sdk.git",
+                "reference": "9b5cc6dff8caac5f88f83798af2f2283d85b05c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antonioribeiro/sdk/zipball/3526c5712960d4b9491de0216f65193a7e53ade6",
-                "reference": "3526c5712960d4b9491de0216f65193a7e53ade6",
+                "url": "https://api.github.com/repos/antonioribeiro/sdk/zipball/9b5cc6dff8caac5f88f83798af2f2283d85b05c6",
+                "reference": "9b5cc6dff8caac5f88f83798af2f2283d85b05c6",
                 "shasum": ""
             },
             "require": {
@@ -1608,10 +1608,10 @@
                 "sdk"
             ],
             "support": {
-                "source": "https://github.com/antonioribeiro/sdk/tree/laravel5.1",
+                "source": "https://github.com/antonioribeiro/sdk/tree/master",
                 "issues": "https://github.com/antonioribeiro/sdk/issues"
             },
-            "time": "2015-07-17 22:32:25"
+            "time": "2015-07-18 22:04:39"
         },
         {
             "name": "pragmarx/support",
