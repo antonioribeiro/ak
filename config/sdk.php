@@ -41,7 +41,7 @@ return [
 		'Services/Activation',
 
 		'Services/Billing',
-//		'Services/Block',
+		'Services/Block',
 		'Services/Bus',
 
 		'Services/Cities',
@@ -55,9 +55,9 @@ return [
 
 		'Services/Files',
 		'Services/Firewall',
-//		'Services/Follow',
+		'Services/Follow',
 
-//		'Services/Groups',
+		'Services/Groups',
 
 		'Services/Kinds',
 
@@ -81,8 +81,8 @@ return [
 		'Services/Security',
 		'Services/SystemEntities',
 
-//		'Services/TwoFactor',
-//		'Services/Translator',
+		'Services/TwoFactor',
+		'Services/Translator',
 
 		'Services/Users',
 
