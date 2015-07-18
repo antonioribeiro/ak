@@ -39,50 +39,7 @@ class UsersTableSeeder extends Seeder {
 			]
 		);
 
-		$clientRepository->create($antonio, $faker->firstName, $faker->lastName, $faker->email, $faker->date, $faker->hexcolor);
-		$clientRepository->create($antonio, $faker->firstName, $faker->lastName, $faker->email, $faker->date, $faker->hexcolor);
-		$clientRepository->create($antonio, $faker->firstName, $faker->lastName, $faker->email, $faker->date, $faker->hexcolor);
-		$clientRepository->create($antonio, $faker->firstName, $faker->lastName, $faker->email, $faker->date, $faker->hexcolor);
-
-		foreach(range(1, 50) as $index)
-		{
-			$name = $faker->name;
-
-			$user = User::create([
-				'first_name' => $name,
-				'username' => $username = $this->createUsername($name),
-				'email' => "acr+{$username}@antoniocarlosribeiro.com",
-			    'password' => 'foda-se',
-			    'two_factor_google_secret_key' => '4CMLW2FWIOEUTY2HACIUPGNGGSCXPBES',
-			    'two_factor_sms_secret_key' => '4CMLW2FWIOEUTY2HACIUPGNGGSCXPBES',
-			    'two_factor_email_secret_key' => '4CMLW2FWIOEUTY2HACIUPGNGGSCXPBES',
-			]);
-
-			// Activation will be random
-			$now_seconds = date("s");
-			if(($now_seconds - (2 * floor($now_seconds/2))) == 0)
-			{
-				UserActivation::create(
-					[
-						'user_id' => $user->id,
-						'code' => $faker->randomDigit(),
-						'completed' => true,
-					]
-				);
-
-				$now_seconds = date("s");
-				if(($now_seconds - (2 * floor($now_seconds/2))) == 0)
-				{
-					Connection::create(
-						[
-							'requestor_id' => $user->id,
-							'requested_id' => $antonio->id,
-							'authorized' => true,
-						]
-					);
-				}
-			}
-		}
+//		$this->seedClients($clientRepository, $antonio, $faker);
 	}
 
 	private function createUsername($name)
@@ -101,6 +58,71 @@ class UsersTableSeeder extends Seeder {
 		$this->names[] = $name;
 
 		return $name;
+	}
+
+	/**
+	 * @param $clientRepository
+	 * @param $antonio
+	 * @param $faker
+	 */
+	private function seedClients($clientRepository, $antonio, $faker)
+	{
+		$clientRepository->create(
+			$antonio, $faker->firstName, $faker->lastName, $faker->email, $faker->date, $faker->hexcolor
+		);
+		$clientRepository->create(
+			$antonio, $faker->firstName, $faker->lastName, $faker->email, $faker->date, $faker->hexcolor
+		);
+		$clientRepository->create(
+			$antonio, $faker->firstName, $faker->lastName, $faker->email, $faker->date, $faker->hexcolor
+		);
+		$clientRepository->create(
+			$antonio, $faker->firstName, $faker->lastName, $faker->email, $faker->date, $faker->hexcolor
+		);
+
+		foreach (range(1, 50)
+		         as
+		         $index)
+		{
+			$name = $faker->name;
+
+			$user = User::create(
+				[
+					'first_name' => $name,
+					'username' => $username = $this->createUsername($name),
+					'email' => "acr+{$username}@antoniocarlosribeiro.com",
+					'password' => 'foda-se',
+					'two_factor_google_secret_key' => '4CMLW2FWIOEUTY2HACIUPGNGGSCXPBES',
+					'two_factor_sms_secret_key' => '4CMLW2FWIOEUTY2HACIUPGNGGSCXPBES',
+					'two_factor_email_secret_key' => '4CMLW2FWIOEUTY2HACIUPGNGGSCXPBES',
+				]
+			);
+
+			// Activation will be random
+			$now_seconds = date("s");
+			if (($now_seconds - (2 * floor($now_seconds / 2))) == 0)
+			{
+				UserActivation::create(
+					[
+						'user_id' => $user->id,
+						'code' => $faker->randomDigit(),
+						'completed' => true,
+					]
+				);
+
+				$now_seconds = date("s");
+				if (($now_seconds - (2 * floor($now_seconds / 2))) == 0)
+				{
+					Connection::create(
+						[
+							'requestor_id' => $user->id,
+							'requested_id' => $antonio->id,
+							'authorized' => true,
+						]
+					);
+				}
+			}
+		}
 	}
 
 }
