@@ -51,7 +51,7 @@
                 </div>
                 <div class="row copyright">
                     <div class="col-md-12">
-                        © 2013 Clean Canvas. All rights reserved. Theme by Detail Canvas.
+                        Â© 2013 Clean Canvas. All rights reserved. Theme by Detail Canvas.
                     </div>
                 </div>
             </div>

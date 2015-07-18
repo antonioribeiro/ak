@@ -1,4 +1,4 @@
-@extends('layouts.blank')
+@extends('pragmarx/sdk::html')
 
 @section('html.head')
     <!-- Styles -->
@@ -19,28 +19,15 @@
     <![endif]-->
 @stop
 
-@section('body.heading')
-    <div class="navbar navbar-inverse navbar-static-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="{{ url('/') }}" class="navbar-brand"><strong>{{ $site_name }}</strong></a>
-            </div>
+@section('html.body')
+    @yield('body.heading')
 
-            @include('partials.menu')
-        </div>
-    </div>
+    @yield('body.contents')
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="{{ url('/') }}/templates/cleancanvas/js/bootstrap.min.js"></script>
+    <script src="{{ url('/') }}/templates/cleancanvas/js/theme.js"></script>
+
+    @yield('body.footer')
 @stop
 
-@section('body.contents')
-    @yield('contents')
-@stop
-
-@section('body.footer')
-    @include('partials.footer')
-@stop
