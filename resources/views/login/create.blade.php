@@ -11,10 +11,13 @@
                     {!! Form::opener(['route' => 'login', 'class' => 'smart-form client-form', 'id' => 'smart-form-register', 'no-return-ajax-url' => true]) !!}
                         <fieldset>
                             <div class="form-group">
-                                <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
+                                {!! Form::text('email', null, ['id' => 'email', 'placeholder' => 'E-mail', 'class' => 'form-control', 'type' => 'email', 'autofocus']) !!}
                             </div>
                             <div class="form-group">
-                                <input class="form-control" placeholder="Senha" name="senha" type="senha" value="">
+                                {!! Form::password('password', ['id' => 'password', 'placeholder' => 'Senha', 'class' => 'form-control', 'type' => 'password', 'value' => '']) !!}
+                            </div>
+                            <div class="note">
+                                <a href="{!! route('password') !!}">Esqueci minha senha</a>
                             </div>
                             <div class="checkbox">
                                 <label>
@@ -22,7 +25,7 @@
                                 </label>
                             </div>
                             <!-- Change this to a button or input when using this as a form -->
-                            <a href="index.html" class="btn btn-lg btn-success btn-block">Login</a>
+                            <input id="sign-in-button" type="submit" class="btn btn-lg btn-success btn-block" value="Login">
                         </fieldset>
                     {!! Form::close() !!}
                 </div>
