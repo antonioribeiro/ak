@@ -1,6 +1,12 @@
 <?php
 
-Route::group(['namespace' => 'App\Services\Home\Http\Controllers'], function()
+Route::group(['middleware' => 'auth'], function()
 {
-	Route::get('/', ['uses' => 'Home@index']);
+	Route::group(['namespace' => 'App\Services\Home\Http\Controllers'], function()
+	{
+		Route::get('/', ['as' => 'home', 'uses' => 'Home@index']);
+
+		Route::get('admin', ['as' => 'admin.home', 'uses' => 'Home@index']);
+	});
 });
+

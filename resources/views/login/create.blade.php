@@ -8,7 +8,7 @@
                     <h3 class="panel-title">AK Administrador</h3>
                 </div>
                 <div class="panel-body">
-                    {!! Form::opener(['route' => 'login', 'class' => 'smart-form client-form', 'id' => 'smart-form-register', 'no-return-ajax-url' => true]) !!}
+                    {!! Form::opener(['route' => 'auth.login', 'class' => 'smart-form client-form', 'id' => 'smart-form-register', 'no-return-ajax-url' => true]) !!}
                         <fieldset>
                             <div class="form-group">
                                 {!! Form::text('email', null, ['id' => 'email', 'placeholder' => 'E-mail', 'class' => 'form-control', 'type' => 'email', 'autofocus']) !!}

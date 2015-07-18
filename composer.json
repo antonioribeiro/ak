@@ -7,7 +7,7 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
-        "pragmarx/sdk": "dev-laravel5.1",
+        "pragmarx/sdk": "master",
         "pragmarx/tracker": "dev-master as 1.0.0",
         "illuminate/html": "^5.0"
     },
@@ -42,7 +42,6 @@
             "php artisan optimize"
         ],
         "pre-update-cmd": [
-            "php artisan clear-compiled"
         ],
         "post-update-cmd": [
             "php artisan optimize"
@@ -56,5 +55,6 @@
     },
     "config": {
         "preferred-install": "dist"
-    }
+    },
+    "minimum-stability": "dev"
 }

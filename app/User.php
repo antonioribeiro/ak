@@ -1,35 +1,18 @@
 <?php
 
-namespace App;
+namespace ConsultorioDigital\Services\Users\Data\Entities;
 
 use Illuminate\Auth\Authenticatable;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
+use PragmaRX\Sdk\Core\Data\Attributes\BusinessHours;
+use PragmaRX\Sdk\Services\Users\Data\Entities\User as SdkUserModel;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
-class User extends Model implements AuthenticatableContract, CanResetPasswordContract
-{
-    use Authenticatable, CanResetPassword;
+class User extends SdkUserModel implements AuthenticatableContract, CanResetPasswordContract {
 
-    /**
-     * The database table used by the model.
-     *
-     * @var string
-     */
-    protected $table = 'users';
+	use Authenticatable, CanResetPassword, BusinessHours;
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = ['name', 'email', 'password'];
+	protected $presenter = 'ConsultorioDigital\Services\Users\Data\Presenters\User';
 
-    /**
-     * The attributes excluded from the model's JSON form.
-     *
-     * @var array
-     */
-    protected $hidden = ['password', 'remember_token'];
 }
