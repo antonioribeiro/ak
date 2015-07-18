@@ -10,4 +10,3 @@
     <span>Já possui uma conta?</span>
     <a href="{!! route('auth.login') !!}">Entre</a>
 </div>
-
