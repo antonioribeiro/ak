@@ -1,33 +1,75 @@
-@extends('layouts.admin')
+@extends('layouts.blank')
 
-@section('content')
-    <div class="row">
-        <div class="col-md-4 col-md-offset-4">
-            <div class="login-panel panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">AK Administrador</h3>
+@section('body.contents')
+    <div id="sign_in2">
+        <div class="container">
+            <div class="section_header">
+                <h3>Login</h3>
+            </div>
+            <div class="row login">
+                <div class="col-sm-5 left_box">
+                    <h4>Entre na sua conta</h4>
+
+                    <div class="perk_box">
+                        <div class="perk">
+                            <span class="icos ico1"></span>
+                            <p><strong>Administre </strong> seus dados de forma completa e segura.</p>
+                        </div>
+                        <div class="perk">
+                            <span class="icos ico2"></span>
+                            <p><strong>Organize e Leia</strong> seu clipping, recebendo apenas o que te interessa, e compartilhe com seus colaboradores.</p>
+                        </div>
+                        <div class="perk">
+                            <span class="icos ico3"></span>
+                            <p><strong>Configure</strong> tudo o que for necessário para ter uma experiência de clipping realmente agradável.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="panel-body">
-                    {!! Form::opener(['route' => 'auth.login', 'class' => 'smart-form client-form', 'id' => 'smart-form-register', 'no-return-ajax-url' => true]) !!}
-                        <fieldset>
-                            <div class="form-group">
-                                {!! Form::text('email', null, ['id' => 'email', 'placeholder' => 'E-mail', 'class' => 'form-control', 'type' => 'email', 'autofocus']) !!}
+
+                <div class="col-sm-6 signin_box">
+                    <div class="box">
+                        <div class="box_cont">
+                            <div class="social">
+                                <a href="#" class="circle facebook">
+                                    <img src="{{ url('/') }}/templates/cleancanvas/img/face.png" alt="">
+                                </a>
+                                <a href="#" class="circle twitter">
+                                    <img src="{{ url('/') }}/templates/cleancanvas/img/twt.png" alt="">
+                                </a>
+                                <a href="#" class="circle gplus">
+                                    <img src="{{ url('/') }}/templates/cleancanvas/img/gplus.png" alt="">
+                                </a>
                             </div>
-                            <div class="form-group">
-                                {!! Form::password('password', ['id' => 'password', 'placeholder' => 'Senha', 'class' => 'form-control', 'type' => 'password', 'value' => '']) !!}
+
+                            <div class="division">
+                                <div class="line l"></div>
+                                <span>ou</span>
+                                <div class="line r"></div>
                             </div>
-                            <div class="note">
-                                <a href="{!! route('password') !!}">Esqueci minha senha</a>
+
+                            <div class="form">
+                                {!! Form::opener(['route' => 'auth.login', 'class' => 'smart-form client-form', 'id' => 'smart-form-register', 'no-return-ajax-url' => true]) !!}
+                                    {!! Form::text('email', null, ['id' => 'email', 'placeholder' => 'E-mail', 'class' => 'form-control', 'type' => 'email', 'autofocus']) !!}
+
+                                    {!! Form::password('password', ['id' => 'password', 'placeholder' => 'Senha', 'class' => 'form-control', 'type' => 'password', 'value' => '']) !!}
+
+                                    <br>
+
+                                    <div class="forgot">
+                                        <span>Não possui uma conta?</span>
+                                        <a href="{!! route('register') !!}">Registre-se</a>
+                                    </div>
+
+                                    <div class="forgot">
+                                        <span>Não lebra a senha?</span>
+                                        <a href="{!! route('password') !!}">Recupere-a</a>
+                                    </div>
+
+                                    <input type="submit" value="Entrar">
+                                {!! Form::close() !!}
                             </div>
-                            <div class="checkbox">
-                                <label>
-                                    <input name="remember" type="checkbox" value="Remember Me">Lembrar de mim
-                                </label>
-                            </div>
-                            <!-- Change this to a button or input when using this as a form -->
-                            <input id="sign-in-button" type="submit" class="btn btn-lg btn-success btn-block" value="Login">
-                        </fieldset>
-                    {!! Form::close() !!}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
