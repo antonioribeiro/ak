@@ -59,7 +59,8 @@ return [
         /*
          * My Providers
          */
-        PragmaRX\Sdk\ServiceProvider::class,
+        PragmaRX\Sdk\LazyServiceProvider::class,
+        PragmaRX\Sdk\EagerServiceProvider::class,
         App\Providers\ComposerServiceProvider::class,
 
     ],
