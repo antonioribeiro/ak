@@ -4,7 +4,7 @@
     <div id="blog">
         <div class="container">
             <div class="section_header">
-                <h3>Clipping</h3>
+                <h3>{{'caption.clipping'}}</h3>
 
                 <input type="text" class="search-query form-control" placeholder="Procurar">
             </div>

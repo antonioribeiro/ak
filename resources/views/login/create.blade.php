@@ -8,20 +8,20 @@
             </div>
             <div class="row login">
                 <div class="col-sm-5 left_box">
-                    <h4>Entre na sua conta</h4>
+                    <h4>{{'paragraphs.login-to-your-account'}}</h4>
 
                     <div class="perk_box">
                         <div class="perk">
                             <span class="icos ico1"></span>
-                            <p><strong>Administre </strong> seus dados de forma completa e segura.</p>
+                            <p>{{'paragraphs.manage-your-data-safely'}}</p>
                         </div>
                         <div class="perk">
                             <span class="icos ico2"></span>
-                            <p><strong>Organize e Leia</strong> seu clipping, recebendo apenas o que te interessa, e compartilhe com seus colaboradores.</p>
+                            <p>{{'paragraphs.manage-your-data-safely'}}</p>
                         </div>
                         <div class="perk">
                             <span class="icos ico3"></span>
-                            <p><strong>Configure</strong> tudo o que for necessário para ter uma experiência de clipping realmente agradável.</p>
+                            <p>{{'paragraphs.configure-everything-you-need'}}</p>
                         </div>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
 
                             <div class="division">
                                 <div class="line l"></div>
-                                <span>ou</span>
+                                <span>{{'captions.or'}}</span>
                                 <div class="line r"></div>
                             </div>
 
@@ -53,21 +53,21 @@
                                         {!! Form::text('email', null, ['id' => 'email', 'placeholder' => 'E-mail', 'class' => 'form-control', 'type' => 'email', 'autofocus']) !!}
 
                                     <div class="form-group">
-                                        {!! Form::password('password', ['id' => 'password', 'placeholder' => 'Senha', 'class' => 'form-control', 'type' => 'password', 'value' => '']) !!}
+                                        {!! Form::password('password', ['id' => 'password', 'placeholder' => '{{'password'}}', 'class' => 'form-control', 'type' => 'password', 'value' => '']) !!}
 
                                     <br>
 
                                     <div class="forgot">
-                                        <span>Não possui uma conta?</span>
-                                        <a href="{!! route('register') !!}">Registre-se</a>
+                                        <span>{{'paragraphs.do-not-have-account'}}</span>
+                                        <a href="{!! route('register') !!}">{{'captions.register'}}</a>
                                     </div>
 
                                     <div class="forgot">
-                                        <span>Não lebra a senha?</span>
-                                        <a href="{!! route('password') !!}">Recupere-a</a>
+                                        <span>{{'paragraphs.do-not-remember-password'}}</span>
+                                        <a href="{!! route('password') !!}">{{'paragraphs.recover-it'}}</a>
                                     </div>
 
-                                    <input type="submit" value="Entrar">
+                                    <input type="submit" value="{{'captions.enter'}}">
                                 {!! Form::close() !!}
                             </div>
                         </div>
