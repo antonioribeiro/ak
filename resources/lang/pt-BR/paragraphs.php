@@ -8,4 +8,10 @@ return array (
     'do-not-have-account' => 'Não possui uma conta?',
     'do-not-remember-password' => 'Não lebra a senha?',
     'recover-it' => 'Recupere-a',
+    'coming-soon' => 'Em Breve',
+    'create-an-account' => 'Crie uma conta',
+    'you-need-an-invite' => 'Para entrar aqui você precisa ser convidado por alguém que já tenha acesso ao serviço.',
+    'have-an-account' => 'Já possui uma conta?',
+	'recover-your-password' => 'Recupere a sua senha',
+    'remembered-your-password' => 'Lembrou a sua senha?',
 );
