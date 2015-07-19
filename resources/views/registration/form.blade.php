@@ -1,14 +1,4 @@
-<div class="social">
-    <a href="#" class="circle facebook">
-        <img src="{{ url('/') }}/templates/cleancanvas/img/face.png" alt="">
-    </a>
-    <a href="#" class="circle twitter">
-        <img src="{{ url('/') }}/templates/cleancanvas/img/twt.png" alt="">
-    </a>
-    <a href="#" class="circle gplus">
-        <img src="{{ url('/') }}/templates/cleancanvas/img/gplus.png" alt="">
-    </a>
-</div>
+@include('login.social')
 
 <div class="division">
     <div class="line l"></div>
@@ -19,23 +9,23 @@
 <div class="form">
     {!! Form::opener(['route' => 'auth.login', 'class' => 'smart-form client-form', 'id' => 'smart-form-register', 'no-return-ajax-url' => true]) !!}
     <div class="form-group">
-        {!! Form::text('email', null, ['id' => 'email', 'placeholder' => 'E-mail', 'class' => 'form-control', 'type' => 'email', 'autofocus']) !!}
+        {!! Form::text('email', null, ['id' => 'email', 'placeholder' => t('captions.email'), 'class' => 'form-control', 'type' => 'email', 'autofocus']) !!}
     </div>
 
     <div class="form-group">
-        {!! Form::password('password', ['id' => 'password', 'placeholder' => 'Senha', 'class' => 'form-control', 'type' => 'password', 'value' => '']) !!}
+        {!! Form::password('password', ['id' => 'password', 'placeholder' => t('captions.password'), 'class' => 'form-control', 'type' => 'password', 'value' => '']) !!}
     </div>
 
     <div class="forgot">
-        <span>Já possui uma conta?</span>
-        <a href="{!! route('auth.login') !!}">Entre</a>
+        <span>{{'paragraphs.have-an-account'}}</span>
+        <a href="{!! route('auth.login') !!}">{{'captions.enter'}}</a>
     </div>
 
     <div class="forgot">
-        <span>Não lebra a senha?</span>
-        <a href="{!! route('password') !!}">Recupere-a</a>
+        <span>{{'paragraphs.do-not-remember-password'}}}</span>
+        <a href="{!! route('password') !!}">{{'paragraphs.recover-it'}}</a>
     </div>
 
-    <input type="submit" value="Entrar">
+    <input type="submit" value="{{'captions.enter'}}">
     {!! Form::close() !!}
 </div>
