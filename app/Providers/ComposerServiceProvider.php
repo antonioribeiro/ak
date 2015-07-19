@@ -70,16 +70,21 @@ class ComposerServiceProvider extends ServiceProvider {
 			$view->with('language_name', Language::getLanguageName());
 		});
 
-//		/**
-//		 * Create an $icon_name view shared variable for each icon in the system
-//		 */
-//		View::composer('*', function($view)
-//		{
-//			foreach (Config::get('icons') as $key => $icon)
-//			{
-//				$view->with("icon_{$key}", $icon);
-//			}
-//		});
+		/**
+		 * Create an $icon_name view shared variable for each icon in the system
+		 */
+		View::composer('*', function($view)
+		{
+			if ( ! $icons = Config::get('icons'))
+			{
+				throw new \Exception('Please create the file config/icons.php');
+			}
+
+			foreach ($icons as $key => $icon)
+			{
+				$view->with("icon_{$key}", $icon);
+			}
+		});
 
 		View::composer('*', function($view)
 		{
