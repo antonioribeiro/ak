@@ -2,11 +2,11 @@
 
 <br>
 
-<h4>Para entrar aqui você precisa ser convidado por alguém que já tenha acesso ao serviço.</h4>
+<h4>{{'paragraphs.you-need-an-invite'}}</h4>
 
 <br><br><br>
 
 <div class="forgot">
-    <span>Já possui uma conta?</span>
-    <a href="{!! route('auth.login') !!}">Entre</a>
+    <span>{{'paragraphs.have-an-account'}}</span>
+    <a href="{!! route('auth.login') !!}">{{'captions.enter'}}</a>
 </div>

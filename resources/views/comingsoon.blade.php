@@ -38,7 +38,7 @@
 <body>
 <div class="container">
     <div class="content">
-        <div class="title">Em Breve</div>
+        <div class="title">{{'paragraphs.coming-soon'}}</div>
     </div>
 </div>
 </body>
