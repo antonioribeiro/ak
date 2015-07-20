@@ -28,7 +28,7 @@
                                 {!! Form::text('email', null, ['id' => 'email', 'placeholder' => 'E-mail', 'class' => 'form-control', 'type' => 'email', 'autofocus']) !!}
 
                             <div class="form-group">
-                                {!! Form::password('password', ['id' => 'password', 'placeholder' => '{{'password'}}', 'class' => 'form-control', 'type' => 'password', 'value' => '']) !!}
+                                {!! Form::password('password', ['id' => 'password', 'placeholder' => t('captions.password'), 'class' => 'form-control', 'type' => 'password', 'value' => '']) !!}
                             </div>
 
                             <br>
