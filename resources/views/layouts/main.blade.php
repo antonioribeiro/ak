@@ -10,7 +10,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="{{ url('/') }}" class="navbar-brand"><strong>{{ $site_name }}</strong></a>
+                <a href="{{ route('home') }}" class="navbar-brand"><strong>{{ $site_name }}</strong></a>
             </div>
 
             @include('partials.menu')
