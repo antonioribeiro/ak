@@ -25,15 +25,20 @@
             </div>
         </div>
 
-        @if ($count % 3 == 0 && $posts->count() - $count >= 3)
+        @if ($count % 3 == 0 && $posts->count() - $count >= 0)
             </div>
 
-            <div class="row post_row {{ $posts->count() - $count == 3 ? 'lastpost_row' : '' }}">
+            <div class="row post_row {{ $posts->count() - $count <= 3 ? 'lastpost_row' : '' }}">
         @endif
 
         <?php $count++;?>
     @endforeach
 </div>
+
+<div class="paginator-container">
+    {!! $posts->render() !!}
+</div>
+
 
 {{--<!-- Post Row -->--}}
 {{--<div class="row post_row">--}}
