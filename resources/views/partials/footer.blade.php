@@ -4,14 +4,14 @@
         <div class="row info">
             <div class="col-sm-6 residence">
                 <ul>
-                    <li>2301 East Lamar Blvd. Suite 140. City, Arlington.</li>
-                    <li>United States, Zip Code TX 76006.</li>
+                    <li>Rua Professor Quintino do Vale, 26</li>
+                    <li>Rio de Janeiro, 20.250-030</li>
                 </ul>
             </div>
             <div class="col-sm-5 touch">
                 <ul>
-                    <li><strong>P.</strong> 1 817 274 2933</li>
-                    <li><strong>E.</strong><a href="#"> bootstrap@twitter.com</a></li>
+                    <li><strong>T.</strong> 21 9 8088-2233</li>
+                    <li><strong>E.</strong><a href="#"> acr@antoniocarlosribeiro.com</a></li>
                 </ul>
             </div>
         </div>
@@ -51,7 +51,7 @@
                 </div>
                 <div class="row copyright">
                     <div class="col-md-12">
-                        © 2013 Clean Canvas. All rights reserved. Theme by Detail Canvas.
+                        © 2015 Adolpho Konder & Antonio Carlos Ribeiro. Todos os direitos reservados. Desenhado por Marco Vianna.
                     </div>
                 </div>
             </div>
