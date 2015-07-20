@@ -8,7 +8,9 @@ use PragmaRX\Sdk\Services\Clipping\Data\Entities\ClippingAuthor;
 use PragmaRX\Sdk\Services\Clipping\Data\Entities\Clipping;
 use PragmaRX\Sdk\Services\Clipping\Data\Entities\ClippingCategory;
 use PragmaRX\Sdk\Services\Clipping\Data\Entities\ClippingLocality;
+use PragmaRX\Sdk\Services\Clipping\Data\Entities\ClippingTag;
 use PragmaRX\Sdk\Services\Clipping\Data\Entities\ClippingVehicle;
+use PragmaRX\Sdk\Services\Tags\Data\Entities\Tag;
 
 class ClippingTableSeeder extends Seeder
 {
@@ -35,6 +37,8 @@ class ClippingTableSeeder extends Seeder
 		DB::table('clipping_vehicles')->delete();
 		DB::table('clipping_categories')->delete();
 		DB::table('clipping_localities')->delete();
+		DB::table('clipping_tags')->delete();
+		DB::table('tags')->delete();
 
 		$clippings = $this->loadClipping();
 
@@ -65,7 +69,7 @@ class ClippingTableSeeder extends Seeder
 				$locality = ClippingLocality::firstOrCreate(['name' => $locality]);
 			}
 
-			Clipping::create([
+			$clipping = Clipping::create([
 				'heading' => $parts[2],
 				'subheading' => $parts[3],
 				'body' => $parts[4],
@@ -73,12 +77,22 @@ class ClippingTableSeeder extends Seeder
 				'vehicle_id' => $vehicle ? $vehicle->id : null,
 				'category_id' => $category ? $category->id : null,
 				'locality_id' => $locality ? $locality->id : null,
-				'tags' => $parts[9],
 			    'url' => $parts[10],
 			    'article_preview_url' => isset($parts[17]) ? $parts[17] : null,
 				'published_at' => $published_at,
 				'created_at' => $created_at,
 			]);
+
+			foreach ($tags = explode(',', $parts[9]) as $key => $tag)
+			{
+				if ($tag = Tag::findOrCreateTag($tag))
+				{
+					ClippingTag::firstOrCreate([
+						'clipping_id' => $clipping->id,
+						'tag_id' => $tag->id
+					]);
+				}
+			}
 		}
 	}
 

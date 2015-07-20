@@ -33,4 +33,5 @@ return array (
 	'captions.terms' => 'Termos',
 	'captions.privacy' => 'Privacidade',
 	'captions.unsubscribe' => 'Descadastrar',
+	'unknow-author' => 'Autor desconhecido',
 );
