@@ -23,7 +23,7 @@
                     <div class="content">
                         <table>
                             <tr>
-                                <td><img src="{{ $assets_layout }}/img/logo.png" height="30" width="142" /></td>
+                                <td><img src="{{ $assets_layout }}/img/logo-150.png" /></td>
                                 <td align="right"><h6 class="collapse">@yield('email-title')</h6></td>
                             </tr>
                         </table>
@@ -39,65 +39,23 @@
             <tr>
                 <td></td>
                 <td class="container" bgcolor="#FFFFFF">
-
-
-
-
                     <div class="content">
-                    <table>
-                        <tr>
-                            <td>
-                                <h3>@yield('email-heading')</h3>
+                        <table>
+                            <tr>
+                                <td>
+                                    <h3>@yield('email-heading')</h3>
 
-                                <p class="lead">@yield('email-body')</p>
-
-                                <!-- social & contact -->
-                                <table class="social" width="100%">
-                                    <tr>
-                                        <td>
-
-                                            <!-- column 1 -->
-                                            <table align="left" class="column">
-                                                <tr>
-                                                    <td>
-
-                                                        <h5 class="">Connect with Us:</h5>
-                                                        <p class=""><a href="#" class="soc-btn fb">Facebook</a> <a href="#" class="soc-btn tw">Twitter</a> <a href="#" class="soc-btn gp">Google+</a></p>
-
-
-                                                    </td>
-                                                </tr>
-                                            </table><!-- /column 1 -->
-
-                                            <!-- column 2 -->
-                                            <table align="left" class="column">
-                                                <tr>
-                                                    <td>
-                                                        <h5 class="">Contact Info:</h5>
-                                                        <p>
-                                                            Phone: <strong>408.341.0600</strong>
-                                                            <br/>
-                                                            Email: <strong><a href="emailto:{{getenv('MAIL.FROM.EMAIL')}}">{{getenv('MAIL.FROM.EMAIL')}}</a></strong>
-                                                        </p>
-                                                    </td>
-                                                </tr>
-                                            </table><!-- /column 2 -->
-
-                                            <span class="clear"></span>
-
-                                        </td>
-                                    </tr>
-                                </table><!-- /social & contact -->
-
-                            </td>
-                        </tr>
-                    </table>
+                                    <p class="lead">@yield('email-body')</p>
+                                </td>
+                            </tr>
+                        </table>
                     </div><!-- /content -->
-
                 </td>
                 <td></td>
             </tr>
         </table><!-- /BODY -->
+
+        <br/><br/><br/>
 
         <!-- FOOTER -->
         <table class="footer-wrap">
@@ -111,9 +69,9 @@
                         <tr>
                             <td align="center">
                                 <p>
-                                    <a href="#">Terms</a> |
-                                    <a href="#">Privacy</a> |
-                                    <a href="#"><unsubscribe>Unsubscribe</unsubscribe></a>
+                                    <a href="#">Termos</a> |
+                                    <a href="#">Privacidade</a> |
+                                    <a href="#"><unsubscribe>Remover da Lista</unsubscribe></a>
                                 </p>
                             </td>
                         </tr>

@@ -29,6 +29,7 @@
 
                             <div class="form-group">
                                 {!! Form::password('password', ['id' => 'password', 'placeholder' => '{{'password'}}', 'class' => 'form-control', 'type' => 'password', 'value' => '']) !!}
+                            </div>
 
                             <br>
 

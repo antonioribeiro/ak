@@ -38,7 +38,13 @@
 @stop
 
 @section('body.contents')
-    @yield('contents')
+    <div id="blog">
+        <div class="container">
+            @include('notifications.flash')
+
+            @yield('contents')
+        </div>
+    </div>
 @stop
 
 @section('body.footer')
