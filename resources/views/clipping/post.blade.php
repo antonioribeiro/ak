@@ -5,8 +5,6 @@
         <div class="container">
             <div class="section_header">
                 <h3>Artigo</h3>
-
-                <input type="text" class="search-query form-control" placeholder="Search">
             </div>
 
             <div class="row">
