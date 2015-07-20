@@ -60,7 +60,7 @@ class ClippingTableSeeder extends Seeder
 				$category = ClippingCategory::firstOrCreate(['name' => $category]);
 			}
 
-			if ($locality = $parts[6])
+			if ($locality = $parts[8])
 			{
 				$locality = ClippingLocality::firstOrCreate(['name' => $locality]);
 			}
