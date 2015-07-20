@@ -39,7 +39,24 @@ class UsersTableSeeder extends Seeder {
 			]
 		);
 
-//		$this->seedClients($clientRepository, $antonio, $faker);
+		$marco = User::create([
+			'first_name' => 'Marco',
+			'last_name' => 'Vianna',
+			'username' => 'marcovianna',
+			'email'      => 'mac.vianna@gmail.com',
+			'password'   => 'mv',
+			'two_factor_google_secret_key' => 'XCMLW2FWIOEUTY2HACIUPGNGGSCXPBES',
+			'two_factor_sms_secret_key' => 'XCMLW2FWIOEUTY2HACIUPGNGGSCXPBES',
+			'two_factor_email_secret_key' => 'XCMLW2FWIOEUTY2HACIUPGNGGSCXPBES',
+		]);
+
+		UserActivation::create(
+			[
+				'user_id' => $marco->id,
+				'code' => $faker->randomDigit(),
+				'completed' => true,
+			]
+		);
 	}
 
 	private function createUsername($name)
