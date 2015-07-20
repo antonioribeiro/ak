@@ -30,4 +30,8 @@ return array (
     'hourly-rates' => 'Hourly Rates',
     'hourly-rate' => 'Hourly Rate',
     'add-rate' => 'Add Rate',
+
+    'captions.terms' => 'Termos',
+    'captions.privacy' => 'Privacidade',
+    'captions.unsubscribe' => 'Descadastrar',
 );
