@@ -1,5 +1,6 @@
 <?php
 
+use \DB;
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
@@ -29,7 +30,11 @@ class ClippingTableSeeder extends Seeder
 
 	private function seedClipping()
 	{
-		Clipping::truncate();
+		DB::table('clipping')->delete();
+		DB::table('clipping_authors')->delete();
+		DB::table('clipping_vehicles')->delete();
+		DB::table('clipping_categories')->delete();
+		DB::table('clipping_localities')->delete();
 
 		$clippings = $this->loadClipping();
 
@@ -40,19 +45,34 @@ class ClippingTableSeeder extends Seeder
 			$created_at = Carbon::createFromFormat('m/d/Y H:i:s', $parts[0]);
 			$published_at = Carbon::createFromFormat('m/d/Y', $parts[1]);
 
-			$author = ClippingAuthor::firstOrCreate(['name' => $parts[7]]);
-			$vehicle = ClippingVehicle::firstOrCreate(['name' => $parts[6]]);
-			$category = ClippingCategory::firstOrCreate(['name' => $parts[5]]);
-			$locality = ClippingLocality::firstOrCreate(['name' => $parts[8]]);
+			if ($author = $parts[7])
+			{
+				$author = ClippingAuthor::firstOrCreate(['name' => $author]);
+			}
+
+			if ($vehicle = $parts[6])
+			{
+				$vehicle = ClippingVehicle::firstOrCreate(['name' => $vehicle]);
+			}
+
+			if ($category = $parts[6])
+			{
+				$category = ClippingCategory::firstOrCreate(['name' => $category]);
+			}
+
+			if ($locality = $parts[6])
+			{
+				$locality = ClippingLocality::firstOrCreate(['name' => $locality]);
+			}
 
 			Clipping::create([
 				'heading' => $parts[2],
 				'subheading' => $parts[3],
 				'body' => $parts[4],
-				'author_id' => $author->id,
-				'vehicle_id' => $vehicle->id,
-				'category_id' => $category->id,
-				'locality_id' => $locality->id,
+				'author_id' => $author ? $author->id : null,
+				'vehicle_id' => $vehicle ? $vehicle->id : null,
+				'category_id' => $category ? $category->id : null,
+				'locality_id' => $locality ? $locality->id : null,
 				'tags' => $parts[9],
 			    'url' => $parts[10],
 			    'article_preview_url' => isset($parts[17]) ? $parts[17] : null,
