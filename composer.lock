@@ -850,12 +850,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "c8c5075a3133ae11c7e170cec7586e20c9d92bc7"
+                "reference": "5251d5b86a54091d4d26615c666338dc420e775a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/c8c5075a3133ae11c7e170cec7586e20c9d92bc7",
-                "reference": "c8c5075a3133ae11c7e170cec7586e20c9d92bc7",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/5251d5b86a54091d4d26615c666338dc420e775a",
+                "reference": "5251d5b86a54091d4d26615c666338dc420e775a",
                 "shasum": ""
             },
             "require": {
@@ -970,7 +970,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-07-18 19:12:15"
+            "time": "2015-07-19 19:27:49"
         },
         {
             "name": "league/flysystem",
@@ -1554,12 +1554,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antonioribeiro/sdk.git",
-                "reference": "2bdcdefbcffdd9a60d1b8af752b55315eaae8655"
+                "reference": "adbeaa395c6f8112d052958b45fa89bfc3838af4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antonioribeiro/sdk/zipball/2bdcdefbcffdd9a60d1b8af752b55315eaae8655",
-                "reference": "2bdcdefbcffdd9a60d1b8af752b55315eaae8655",
+                "url": "https://api.github.com/repos/antonioribeiro/sdk/zipball/adbeaa395c6f8112d052958b45fa89bfc3838af4",
+                "reference": "adbeaa395c6f8112d052958b45fa89bfc3838af4",
                 "shasum": ""
             },
             "require": {
@@ -1611,7 +1611,7 @@
                 "source": "https://github.com/antonioribeiro/sdk/tree/master",
                 "issues": "https://github.com/antonioribeiro/sdk/issues"
             },
-            "time": "2015-07-19 03:12:53"
+            "time": "2015-07-20 00:11:04"
         },
         {
             "name": "pragmarx/support",
@@ -3823,12 +3823,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/comparator.git",
-                "reference": "abd05e77d364138c0532a1b78a13c4d78311f546"
+                "reference": "dee3fd1828677b2182c076ad2caecbb5c7bdbf1c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/abd05e77d364138c0532a1b78a13c4d78311f546",
-                "reference": "abd05e77d364138c0532a1b78a13c4d78311f546",
+                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/dee3fd1828677b2182c076ad2caecbb5c7bdbf1c",
+                "reference": "dee3fd1828677b2182c076ad2caecbb5c7bdbf1c",
                 "shasum": ""
             },
             "require": {
@@ -3879,7 +3879,7 @@
                 "compare",
                 "equality"
             ],
-            "time": "2015-06-21 07:54:35"
+            "time": "2015-07-19 12:54:49"
         },
         {
             "name": "sebastian/diff",
