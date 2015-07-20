@@ -5,6 +5,7 @@ namespace App\Exceptions;
 use Exception;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use PragmaRX\Sdk\Services\ExceptionHandler\Service\Facade as SdkExceptionHandler;
 
 class Handler extends ExceptionHandler
 {
@@ -39,6 +40,11 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
-        return parent::render($request, $e);
+	    if ($result = SdkExceptionHandler::handle($e))
+	    {
+		    return $result;
+	    }
+
+	    return parent::render($request, $e);
     }
 }
