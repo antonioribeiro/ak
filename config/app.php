@@ -2,7 +2,7 @@
 
 return [
 
-	'name' => 'Adolpho Konder',
+	'name' => 'Politico On',
 
     'debug' => env('APP_DEBUG', false),
 
@@ -10,7 +10,7 @@ return [
 
     'timezone' => 'UTC',
 
-    'locale' => 'pt-BR',
+    'locale' => 'pt_BR',
 
     'fallback_locale' => 'en',
 
