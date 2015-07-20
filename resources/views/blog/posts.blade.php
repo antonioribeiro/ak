@@ -18,6 +18,8 @@
                 </div>
                 <div class="author_box">
                     <h6>{{ $post->author ? $post->author->name : 'Autor desconhecido' }}</h6>
+                    <h6>{{ $post->vehicle ? $post->vehicle->name : '' }}</h6>
+                    <h6>{{ $post->locality ? $post->locality->name : '' }}</h6>
                 </div>
                 <a class="plus_wrapper" href="blogpost.html">
                     <span>&#43;</span>
