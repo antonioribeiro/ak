@@ -22,7 +22,12 @@
                         <div class="author_box">
                             <div class="author">{{ $post->author ? $post->author->name : t('captions.unknow-author') }}</div>
                             <div class="area">{{ $post->vehicle ? $post->vehicle->name : '' }}</div>
+                            @if ($post->url)
+                                <div class="area"><a href="{{ $post->url }}">{{ Illuminate\Support\Str::limit($post->url, 60) }}</a></div>
+                            @endif
                         </div>
+
+
                     </div>
                 </div>
             </div>
