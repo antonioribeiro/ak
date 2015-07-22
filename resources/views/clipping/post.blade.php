@@ -26,8 +26,19 @@
                                 <div class="area"><a href="{{ $post->url }}">{{ Illuminate\Support\Str::limit($post->url, 60) }}</a></div>
                             @endif
                         </div>
+                    </div>
 
+                    <div class="post_content">
+                        <h3>Imagens relacionadas</h3>
                         <img class="post_pic img-responsive" src="{{ $post->present()->snapshotUrl() }}" />
+
+                        <br><br>
+                        
+                        @foreach ($post->files as $file)
+                            @if ( ! $file->is_main && ! $file->is_snapshot && $file->file)
+                                <img class="post_pic img-responsive" src="{{ $file->file->file->getUrl() }}" />
+                            @endif
+                        @endforeach
                     </div>
                 </div>
             </div>
