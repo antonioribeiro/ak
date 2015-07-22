@@ -33,7 +33,7 @@
                         <img class="post_pic img-responsive" src="{{ $post->present()->snapshotUrl() }}" />
 
                         <br><br>
-                        
+
                         @foreach ($post->files as $file)
                             @if ( ! $file->is_main && ! $file->is_snapshot && $file->file)
                                 <img class="post_pic img-responsive" src="{{ $file->file->file->getUrl() }}" />
@@ -45,4 +45,3 @@
         </div>
     </div>
 @stop
-

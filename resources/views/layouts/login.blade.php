@@ -1,4 +1,4 @@
-@extends('layouts.blank')
+@extends('layouts.main-blank')
 
 @section('body.contents')
     <div id="sign_in2">

@@ -22,7 +22,10 @@ Route::group(['middleware' => 'auth', 'prefix' => 'beta'], function()
 	Route::group(['namespace' => 'App\Services\Home\Http\Controllers'], function()
 	{
 		Route::get('/', ['as' => 'home', 'uses' => 'Home@index']);
+	});
 
-		Route::get('admin', ['as' => 'admin.home', 'uses' => 'Home@index']);
+	Route::group(['namespace' => 'App\Services\Admin\Http\Controllers', 'prefix' => 'admin'], function()
+	{
+		Route::get('/', ['as' => 'admin.home', 'uses' => 'Admin@index']);
 	});
 });

@@ -24,9 +24,9 @@ class ComposerServiceProvider extends ServiceProvider {
 
 			$view->with('html_attributes', '');
 
-			$view->with('html_title', Config::get('app.root_domain'));
+			$view->with('html_title', Config::get('app.name'));
 
-			$view->with('html_keywords', 'consultorio,agenda,psicologia,psicologo,sub-locacao');
+			$view->with('html_keywords', 'politico,clipping,politics');
 
 			$view->with('html_meta_tags', ['<!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->']);
 
