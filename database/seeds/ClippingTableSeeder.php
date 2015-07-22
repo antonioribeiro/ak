@@ -43,6 +43,7 @@ class ClippingTableSeeder extends Seeder
 		DB::table('clipping_files')->delete();
 		DB::table('clipping_files_types')->delete();
 		DB::table('tags')->delete();
+		DB::table('files')->delete();
 
 		$clippings = $this->loadClipping();
 
@@ -117,7 +118,7 @@ class ClippingTableSeeder extends Seeder
 			{
 				if (isset($parts[$counter]) && ! empty($parts[$counter]))
 				{
-					$clippingFile->createFor(
+					$file = $clippingFile->createFor(
 						$clipping,
 						$isMainFile,
 						false,
@@ -125,7 +126,7 @@ class ClippingTableSeeder extends Seeder
 						ClippingFileType::firstorCreate(['name' => 'image'])
 					);
 
-					$isMainFile = false;
+					$isMainFile = $file->file_name_id ? false : $isMainFile;
 				}
 			}
 
