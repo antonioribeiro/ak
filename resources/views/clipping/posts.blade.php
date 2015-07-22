@@ -15,7 +15,8 @@
                 <div class="post">
                     <div class="img">
                         <a href="{{ route('clipping.post', ['id' => $post->id]) }}">
-                            <img src="http://lorempixel.com/304/192/?{{ $post->id }}" alt="" class="img-responsive" />
+                            <img src="{{ $post->present()->imageUrl(304,192) }}" alt="" class="img-responsive" />
+                            {{--<img src="http://lorempixel.com/304/192/?{{ $post->id }}" alt="" class="img-responsive" />--}}
                         </a>
                     </div>
                     <div class="text">

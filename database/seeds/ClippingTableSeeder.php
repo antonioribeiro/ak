@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 use PragmaRX\Sdk\Services\Clipping\Data\Entities\ClippingAuthor;
 use PragmaRX\Sdk\Services\Clipping\Data\Entities\Clipping;
 use PragmaRX\Sdk\Services\Clipping\Data\Entities\ClippingCategory;
+use PragmaRX\Sdk\Services\Clipping\Data\Entities\ClippingFile;
+use PragmaRX\Sdk\Services\Clipping\Data\Entities\ClippingFileType;
 use PragmaRX\Sdk\Services\Clipping\Data\Entities\ClippingLocality;
 use PragmaRX\Sdk\Services\Clipping\Data\Entities\ClippingTag;
 use PragmaRX\Sdk\Services\Clipping\Data\Entities\ClippingVehicle;
@@ -38,6 +40,8 @@ class ClippingTableSeeder extends Seeder
 		DB::table('clipping_categories')->delete();
 		DB::table('clipping_localities')->delete();
 		DB::table('clipping_tags')->delete();
+		DB::table('clipping_files')->delete();
+		DB::table('clipping_files_types')->delete();
 		DB::table('tags')->delete();
 
 		$clippings = $this->loadClipping();
@@ -92,6 +96,50 @@ class ClippingTableSeeder extends Seeder
 						'tag_id' => $tag->id
 					]);
 				}
+			}
+
+			$clippingFile = app()->make(ClippingFile::class);
+
+			if (isset($parts[11]) && ! empty($parts[11]))
+			{
+				$clippingFile->createFor(
+					$clipping,
+					false,
+					false,
+					$parts[11],
+					ClippingFileType::firstorCreate(['name' => 'video'])
+				);
+			}
+
+			$isMainFile = true;
+
+			for ($counter = 11; $counter <= 16; $counter++)
+			{
+				if (isset($parts[$counter]) && ! empty($parts[$counter]))
+				{
+					$clippingFile->createFor(
+						$clipping,
+						$isMainFile,
+						false,
+						$parts[$counter],
+						ClippingFileType::firstorCreate(['name' => 'image'])
+					);
+
+					$isMainFile = false;
+				}
+			}
+
+			if (isset($parts[17]) && ! empty($parts[17]))
+			{
+				$file = str_replace('?dl=0', '?dl=1', $parts[17]);
+
+				$clippingFile->createFor(
+					$clipping,
+					false,
+					true, /// this is the snapshot
+					$file,
+					ClippingFileType::firstorCreate(['name' => 'image'])
+				);
 			}
 		}
 	}

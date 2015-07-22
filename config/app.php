@@ -20,6 +20,10 @@ return [
 
     'log' => 'single',
 
+    'upload_root' => public_path(),
+
+    'upload_relative_path' => 'files/uploaded',
+
     'providers' => [
 
         /*

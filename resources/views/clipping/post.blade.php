@@ -9,7 +9,7 @@
 
             <div class="row">
                 <div class="col-sm-9">
-                    <img class="post_pic img-responsive" src="http://lorempixel.com/700/538/" />
+                    <img class="post_pic img-responsive" src="{{ $post->present()->imageUrl(700,538) }}" />
 
                     <div class="post_content">
                         <h2>{{ $post->heading }}</h2>
@@ -27,7 +27,7 @@
                             @endif
                         </div>
 
-
+                        <img class="post_pic img-responsive" src="{{ $post->present()->snapshotUrl() }}" />
                     </div>
                 </div>
             </div>

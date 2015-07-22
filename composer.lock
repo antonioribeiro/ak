@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cartalyst/sentinel.git",
-                "reference": "a7a26b49c46381ab1f45c8e6a87ffb16456bedda"
+                "reference": "59e4fe70ee2188ad8a38727b7d77be4c1a344c21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cartalyst/sentinel/zipball/a7a26b49c46381ab1f45c8e6a87ffb16456bedda",
-                "reference": "a7a26b49c46381ab1f45c8e6a87ffb16456bedda",
+                "url": "https://api.github.com/repos/cartalyst/sentinel/zipball/59e4fe70ee2188ad8a38727b7d77be4c1a344c21",
+                "reference": "59e4fe70ee2188ad8a38727b7d77be4c1a344c21",
                 "shasum": ""
             },
             "require": {
@@ -44,13 +44,10 @@
             "extra": {
                 "component": "package",
                 "branch-alias": {
-                    "dev-master": "2.1.x-dev"
+                    "dev-master": "2.0.x-dev"
                 }
             },
             "autoload": {
-                "classmap": [
-                    "src/migrations"
-                ],
                 "psr-4": {
                     "Cartalyst\\Sentinel\\": "src/"
                 }
@@ -95,7 +92,7 @@
                 "php",
                 "security"
             ],
-            "time": "2015-06-25 15:56:33"
+            "time": "2015-07-21 12:07:31"
         },
         {
             "name": "cartalyst/support",
@@ -980,12 +977,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "5251d5b86a54091d4d26615c666338dc420e775a"
+                "reference": "5ec184ed4d8a96a8a14b7919161579f886ee833e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/5251d5b86a54091d4d26615c666338dc420e775a",
-                "reference": "5251d5b86a54091d4d26615c666338dc420e775a",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/5ec184ed4d8a96a8a14b7919161579f886ee833e",
+                "reference": "5ec184ed4d8a96a8a14b7919161579f886ee833e",
                 "shasum": ""
             },
             "require": {
@@ -1100,7 +1097,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-07-19 19:27:49"
+            "time": "2015-07-21 14:32:59"
         },
         {
             "name": "laravel/socialite",
@@ -1155,6 +1152,68 @@
                 "oauth"
             ],
             "time": "2015-06-30 20:11:14"
+        },
+        {
+            "name": "league/commonmark",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/commonmark.git",
+                "reference": "f4e0e0a4d2078788a9ffdfd69314a6b53ca86dd6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/f4e0e0a4d2078788a9ffdfd69314a6b53ca86dd6",
+                "reference": "f4e0e0a4d2078788a9ffdfd69314a6b53ca86dd6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.4.8"
+            },
+            "replace": {
+                "colinodell/commonmark-php": "*"
+            },
+            "require-dev": {
+                "erusev/parsedown": "~1.0",
+                "jgm/commonmark": "0.21",
+                "jgm/smartpunct": "0.21",
+                "michelf/php-markdown": "~1.4",
+                "phpunit/phpunit": "~4.3",
+                "phpunit/phpunit-mock-objects": "2.3.0",
+                "symfony/finder": "~2.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.10-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\CommonMark\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Colin O'Dell",
+                    "email": "colinodell@gmail.com",
+                    "homepage": "http://www.colinodell.com",
+                    "role": "Lead Developer"
+                }
+            ],
+            "description": "Markdown parser for PHP based on the CommonMark spec",
+            "homepage": "https://github.com/thephpleague/commonmark",
+            "keywords": [
+                "commonmark",
+                "markdown",
+                "parser"
+            ],
+            "time": "2015-07-20 19:50:28"
         },
         {
             "name": "league/flysystem",
@@ -1360,12 +1419,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "c5b08724f4b11fd90a2c36a64d4868bcee7ba6a4"
+                "reference": "e4f45be5dcfeb54c45f85b50cdbb3ef8a2bfbd81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/c5b08724f4b11fd90a2c36a64d4868bcee7ba6a4",
-                "reference": "c5b08724f4b11fd90a2c36a64d4868bcee7ba6a4",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/e4f45be5dcfeb54c45f85b50cdbb3ef8a2bfbd81",
+                "reference": "e4f45be5dcfeb54c45f85b50cdbb3ef8a2bfbd81",
                 "shasum": ""
             },
             "require": {
@@ -1428,7 +1487,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2015-07-14 09:27:59"
+            "time": "2015-07-20 18:31:46"
         },
         {
             "name": "mtdowling/cron-expression",
@@ -1801,12 +1860,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antonioribeiro/sdk.git",
-                "reference": "70adf76f33ef1d085af00f095d202a4794c9c45d"
+                "reference": "8d316edc41931c3aed59ffb7070a64beaf3ae2e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antonioribeiro/sdk/zipball/70adf76f33ef1d085af00f095d202a4794c9c45d",
-                "reference": "70adf76f33ef1d085af00f095d202a4794c9c45d",
+                "url": "https://api.github.com/repos/antonioribeiro/sdk/zipball/8d316edc41931c3aed59ffb7070a64beaf3ae2e0",
+                "reference": "8d316edc41931c3aed59ffb7070a64beaf3ae2e0",
                 "shasum": ""
             },
             "require": {
@@ -1815,6 +1874,7 @@
                 "guzzlehttp/guzzle": "~5.0",
                 "jenssegers/date": "~3",
                 "laravel/framework": "~5.0",
+                "league/commonmark": "~0.9",
                 "php": ">=5.5.0",
                 "pragmarx/firewall": "~0.5",
                 "pragmarx/glottos": "~1.5",
@@ -1858,7 +1918,7 @@
                 "source": "https://github.com/antonioribeiro/sdk/tree/master",
                 "issues": "https://github.com/antonioribeiro/sdk/issues"
             },
-            "time": "2015-07-20 12:32:56"
+            "time": "2015-07-21 18:42:12"
         },
         {
             "name": "pragmarx/support",
@@ -3363,12 +3423,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "b1abe41e1357ad790398d7a668b19ac733b4e1c1"
+                "reference": "5594929b5d9d31871cace6d3d7cb940a0010161c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/b1abe41e1357ad790398d7a668b19ac733b4e1c1",
-                "reference": "b1abe41e1357ad790398d7a668b19ac733b4e1c1",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/5594929b5d9d31871cace6d3d7cb940a0010161c",
+                "reference": "5594929b5d9d31871cace6d3d7cb940a0010161c",
                 "shasum": ""
             },
             "require": {
@@ -3407,7 +3467,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2015-07-15 08:28:00"
+            "time": "2015-07-21 12:25:36"
         },
         {
             "name": "hamcrest/hamcrest-php",

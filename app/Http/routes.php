@@ -9,17 +9,12 @@ Route::get('/', function()
 
 Route::get('beta', function()
 {
-
-	// return redirect('clipping');
+	return redirect('clipping');
 });
 
 Route::get('seed', function()
 {
-	$clipping = Clipping::find('0c023755-0b8f-432f-80f8-1ec63506caf2');
-
-	dd($clipping->tags->lists('name'));
-
-	dd($clipping);
+	Artisan::call('db:seed');
 });
 
 Route::group(['middleware' => 'auth', 'prefix' => 'beta'], function()
