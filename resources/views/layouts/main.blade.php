@@ -1,4 +1,4 @@
-@extends('layouts.blank')
+@extends('layouts.main-blank')
 
 @section('body.heading')
     <div class="navbar navbar-inverse navbar-static-top" role="navigation">

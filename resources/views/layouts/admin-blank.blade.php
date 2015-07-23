@@ -7,8 +7,21 @@
     <!-- MetisMenu CSS -->
     <link href="{{url('/')}}/vendor/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
+    <!-- DataTables CSS -->
+    <link href="{{url('/')}}/vendor/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="{{url('/')}}/vendor/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="{{url('/')}}/vendor/startbootstrap-sb-admin-2/dist/css/timeline.css" rel="stylesheet">
+
     <!-- Custom CSS -->
     <link href="{{url('/')}}/vendor/startbootstrap-sb-admin-2/dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="{{url('/')}}/vendor/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{{url('/')}}/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- Custom Fonts -->
     <link href="{{url('/')}}/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -26,17 +39,32 @@
 
     @yield('body.contents')
 
+    @yield('body.footer')
+
     <!-- jQuery -->
     <script src="{{url('/')}}/vendor/jquery/dist/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="{{url('/')}}/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="{{url('/')}}/vendor/metisMenu/dist/metisMenu.min.js"></script>
+    <!-- Morris Charts JavaScript -->
+    <script src="{{url('/')}}/vendor/raphael/raphael-min.js"></script>
+    <script src="{{url('/')}}/vendor/morrisjs/morris.min.js"></script>
+
+    {{--<script src="../js/morris-data.js"></script>--}}
 
     <!-- Custom Theme JavaScript -->
     <script src="{{url('/')}}/vendor/startbootstrap-sb-admin-2/dist/js/sb-admin-2.js"></script>
 
-    @yield('body.footer')
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="{{url('/')}}/vendor/metisMenu/dist/metisMenu.min.js"></script>
+
+    <!-- DataTables JavaScript -->
+    <script src="{{url('/')}}/vendor/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="{{url('/')}}/vendor/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="{{url('/')}}/vendor/startbootstrap-sb-admin-2/dist/js/sb-admin-2.js"></script>
+
+    @yield('javascript')
 @stop

@@ -1,1 +1,1 @@
-@extends('layouts.blank')
+@extends('layouts.main-blank')
