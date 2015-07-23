@@ -6,8 +6,10 @@
             <h1 class="page-header">
                 Clipping
 
-                <button type="button" class="btn btn-info btn-circle pull-right"><i class="fa fa-plus"></i>
-                </button>
+                <a href="{{ route('admin.clipping.create') }}">
+                    <button type="button" class="btn btn-info btn-circle pull-right"><i class="fa fa-plus"></i>
+                    </button>
+                </a>
             </h1>
 
 
@@ -33,6 +35,7 @@
                                     <th>Editoria</th>
                                     <th>Localidade</th>
                                     <th>Veículo</th>
+                                    <th>Extras</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -43,6 +46,21 @@
                                             <td>{{ $post->category->name }}</td>
                                             <td>{{ $post->locality->name }}</td>
                                             <td>{{ $post->vehicle->name }}</td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-sm-2">
+                                                        <a href="{{ route('clipping.post', ['id' => $post->id]) }}"><i class="fa fa-eye"></i></a>
+                                                    </div>
+
+                                                    <div class="col-sm-2">
+                                                        <a href="{{ route('admin.clipping.edit', ['id' => $post->id]) }}"><i class="fa fa-pencil"></i></a>
+                                                    </div>
+
+                                                    <div class="col-sm-2">
+                                                        <a href="{{ route('admin.clipping.delete', ['id' => $post->id]) }}"><i class="fa fa-trash"></i></a>
+                                                    </div>
+                                                </div>
+                                            </td>
                                         </tr>
                                     @endforeach
                                 </tbody>
