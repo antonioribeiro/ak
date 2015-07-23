@@ -34,4 +34,5 @@ return array (
 	'captions.privacy' => 'Privacidade',
 	'captions.unsubscribe' => 'Descadastrar',
 	'unknow-author' => 'Autor desconhecido',
+	'search' => 'Procurar'
 );
