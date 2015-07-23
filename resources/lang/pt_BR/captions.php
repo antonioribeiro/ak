@@ -34,5 +34,17 @@ return array (
 	'captions.privacy' => 'Privacidade',
 	'captions.unsubscribe' => 'Descadastrar',
 	'unknow-author' => 'Autor desconhecido',
-	'search' => 'Procurar'
+	'search' => 'Procurar',
+	'new' => 'Novo',
+	'heading' => 'Título',
+	'subheading' => 'Subtítulo',
+	'article' => 'Matéria',
+	'article-url' => 'URL da Matéria',
+	'preview' => 'Prévia',
+	'editorial' => 'Editoria',
+	'vehicle' => 'Veículo',
+	'create' => 'Criar',
+	'author' => 'Autor',
+	'locality' => 'Localidade',
+	'published-at' => 'Publicado em',
 );
