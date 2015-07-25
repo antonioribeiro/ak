@@ -36,3 +36,15 @@ Route::group(['middleware' => 'auth', 'prefix' => 'beta'], function()
 		});
 	});
 });
+
+Route::group(['prefix' => 'api/v1'], function()
+{
+	Route::group(['namespace' => 'App\Services\Api\Http\Controllers'], function()
+	{
+		Route::group(['prefix' => 'markdown'], function()
+		{
+			Route::post('tohtml', ['as' => 'api.markdown.tohtml', 'uses' => 'Markdown@toHtml']);
+		});
+	});
+});
+
