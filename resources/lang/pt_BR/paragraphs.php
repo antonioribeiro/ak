@@ -39,4 +39,5 @@ return array (
     'change-password' => 'Trocar Senha',
 	'paste-urls-here' => 'Cole as URLs aqui',
 	'drop-here-or-click' => 'Solte imagens aqui ou clique para fazer upload.',
+	'select-a-locality' => 'Selecione uma localidade',
 );

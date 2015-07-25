@@ -108,14 +108,7 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label>{{'captions.locality'}}</label>
-                                        <select class="form-control">
-                                            <option>ESCOLHA UMA OPÇÃO</option>
-                                            <option>Rio de Janeiro</option>
-                                            <option>São Gonçalo</option>
-                                            <option>Niterói</option>
-                                            <option>Baixada Fluminense</option>
-                                            <option>(outro)</option>
-                                        </select>
+                                        <div id="locality"></div>
                                     </div>
                                 </div>
 
@@ -217,7 +210,9 @@
 @section('reactjs')
     @include('javascript.reactjs.markdown-editor')
     @include('javascript.reactjs.markdown-preview')
+    @include('javascript.reactjs.select')
 
     React.render(<MarkdownEditor />, document.getElementById('post-body'));
     React.render(<MarkdownPreview />, document.getElementById('post-body-preview'));
+    React.render(<Select model="locality" first="{{ strtoupper(t('paragraphs.select-a-locality')) }}" last="({{ strtolower(t('captions.other')) }})"/>, document.getElementById('locality'));
 @stop

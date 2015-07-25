@@ -50,4 +50,5 @@ return array (
 	'image-main' => 'Imagem Principal',
 	'image-snapshot' => 'Instantâneo',
 	'image-other' => 'Outras Imagens',
+	'other' => 'Outro',
 );
