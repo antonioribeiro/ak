@@ -37,4 +37,6 @@ return array (
     'please-enter-your-password-confirmation-data' => 'Por favor digite o e-mail, a nova senha e redigite a nova senha para confirmar.',
     'change-your-password' => 'Modifique a sua senha',
     'change-password' => 'Trocar Senha',
+	'paste-urls-here' => 'Cole as URLs aqui',
+	'drop-here-or-click' => 'Solte imagens aqui ou clique para fazer upload.',
 );

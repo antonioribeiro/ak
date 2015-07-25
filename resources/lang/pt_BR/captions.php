@@ -47,4 +47,7 @@ return array (
 	'author' => 'Autor',
 	'locality' => 'Localidade',
 	'published-at' => 'Publicado em',
+	'image-main' => 'Imagem Principal',
+	'image-snapshot' => 'Instantâneo',
+	'image-other' => 'Outras Imagens',
 );

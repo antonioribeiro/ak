@@ -28,4 +28,5 @@ return array (
     'rate-deleted' => 'The rate was deleted.',
     'rate-updated' => 'The rate was updated.',
     'select-a-rate' => 'Select a rate',
+    'drop-here-or-click' => 'Drop files here or click to upload.',
 );

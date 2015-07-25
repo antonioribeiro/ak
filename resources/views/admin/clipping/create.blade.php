@@ -46,7 +46,7 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label>{{'captions.preview'}}</label>
-                                        <textarea class="form-control" rows="3"></textarea>
+                                        <textarea class="form-control" rows="3" disabled="disabled"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -122,6 +122,53 @@
                                 </div>
                             </div>
 
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label>{{'captions.image-main'}}</label>
+                                        <div id="main-image" class="dropzone dz-clickable">
+                                            <div class="dz-message">
+                                                {{'paragraphs.drop-here-or-click'}}<br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>{{'paragraphs.paste-urls-here'}}</label>
+                                        <textarea class="form-control" rows="3"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label>{{'captions.image-snapshot'}}</label>
+                                        <div id="snapshot-image" class="dropzone dz-clickable">
+                                            <div class="dz-message">
+                                                {{'paragraphs.drop-here-or-click'}}<br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>{{'paragraphs.paste-urls-here'}}</label>
+                                        <textarea class="form-control" rows="3"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label>{{'captions.image-other'}}</label>
+                                        <div id="other-images" class="dropzone dz-clickable">
+                                            <div class="dz-message">
+                                                {{'paragraphs.drop-here-or-click'}}<br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>{{'paragraphs.paste-urls-here'}}</label>
+                                        <textarea class="form-control" rows="3"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
                             <button type="submit" class="btn btn-primary">{{'captions.save'}}</button>
                             <a href="{{ route('admin.home') }}" type="reset" class="btn btn-danger">{{'captions.cancel'}}</a>
                         </form>
@@ -137,5 +184,20 @@
 @stop
 
 @section('javascript')
+    <script>
+        var dzMainImage = new Dropzone("div#main-image",
+        {
+            url: "/file/post",
 
+            dragend: function(event) {
+                console.log(event);
+            }
+        });
+
+
+        var dzSnapshotImage = new Dropzone("div#snapshot-image", { url: "/file/post" });
+        var dzOtherImages = new Dropzone("div#other-images", { url: "/file/post" });
+
+        autosize(document.querySelectorAll('textarea'));
+    </script>
 @stop

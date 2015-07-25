@@ -26,6 +26,12 @@
     <!-- Custom Fonts -->
     <link href="{{url('/')}}/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <!-- Dropzone -->
+    <link href="{{url('/')}}/vendor/dropzone/dist/dropzone.css" rel="stylesheet" type="text/css">
+
+    <!-- Dropzone -->
+    <link href="{{url('/')}}/css/admin.css" rel="stylesheet" type="text/css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -65,6 +71,16 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="{{url('/')}}/vendor/startbootstrap-sb-admin-2/dist/js/sb-admin-2.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="{{url('/')}}/vendor/dropzone/dist/dropzone.js"></script>
+
+    <!-- autosize -->
+    <script src="{{url('/')}}/vendor/autosize/dist/autosize.min.js"></script>
+
+    <script>
+        Dropzone.autoDiscover = false;
+    </script>
 
     @yield('javascript')
 @stop

@@ -2,6 +2,7 @@
   "name": "Adolpho Konder",
   "dependencies": {
     "startbootstrap-sb-admin-2": "~1.0.7",
-    "dropzone": "~4.0.1"
+    "dropzone": "~4.0.1",
+    "autosize": "~3.0.8"
   }
 }
