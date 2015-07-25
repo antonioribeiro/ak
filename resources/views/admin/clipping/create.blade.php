@@ -40,13 +40,17 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label>{{'captions.article'}}</label>
-                                        <textarea class="form-control" rows="3"></textarea>
+                                        <div id="body-react">
+
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label>{{'captions.preview'}}</label>
-                                        <textarea class="form-control" rows="3" disabled="disabled"></textarea>
+                                        <div id="body-preview-react">
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -204,4 +208,5 @@
 
 @section('reactjs')
     @include('admin.clipping.body')
+    @include('admin.clipping.body-preview')
 @stop
