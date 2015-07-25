@@ -40,4 +40,6 @@ return array (
 	'paste-urls-here' => 'Cole as URLs aqui',
 	'drop-here-or-click' => 'Solte imagens aqui ou clique para fazer upload.',
 	'select-a-locality' => 'Selecione uma localidade',
+	'select-an-editorial' => 'Selecione uma editoria',
+	'select-a-vehicle' => 'Selecione um veículo',
 );

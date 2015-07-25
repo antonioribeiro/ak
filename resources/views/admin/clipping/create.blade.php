@@ -59,19 +59,12 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label>{{'captions.editorial'}}</label>
-
-                                        <select class="form-control">
-                                            <option>ESCOLHA UMA OPÇÃO</option>
-                                            <option>Política</option>
-                                            <option>Esportes</option>
-                                            <option>Segurança</option>
-                                            <option>(outro)</option>
-                                        </select>
+                                        <div id="editorial"></div>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-6">
-                                    <div class="form-group">
+                                    <div class="form-group" id="other-editorial-group">
                                         <label>{{'captions.editorial'}} ({{'captions.create'}})</label>
                                         <input class="form-control">
                                     </div>
@@ -82,18 +75,12 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label>{{'captions.vehicle'}}</label>
-                                        <select class="form-control">
-                                            <option>ESCOLHA UMA OPÇÃO</option>
-                                            <option>G1</option>
-                                            <option>O Globo</option>
-                                            <option>Extra</option>
-                                            <option>(outro)</option>
-                                        </select>
+                                        <div id="vehicle"></div>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-6">
-                                    <div class="form-group">
+                                    <div class="form-group" id="other-vehicle-group">
                                         <label>{{'captions.vehicle'}} ({{'captions.create'}})</label>
                                         <input class="form-control">
                                     </div>
@@ -113,7 +100,7 @@
                                 </div>
 
                                 <div class="col-sm-6">
-                                    <div class="form-group">
+                                    <div class="form-group" id="other-locality-group">
                                         <label>{{'captions.locality'}} ({{'captions.create'}})</label>
                                         <input class="form-control">
                                     </div>
@@ -213,6 +200,33 @@
     @include('javascript.reactjs.select')
 
     React.render(<MarkdownEditor />, document.getElementById('post-body'));
+
     React.render(<MarkdownPreview />, document.getElementById('post-body-preview'));
-    React.render(<Select model="locality" first="{{ strtoupper(t('paragraphs.select-a-locality')) }}" last="({{ strtolower(t('captions.other')) }})"/>, document.getElementById('locality'));
+
+    React.render(<Select
+            model="editorial"
+            first="{{ strtoupper(t('paragraphs.select-an-editorial')) }}"
+            last="({{ strtolower(t('captions.other')) }})"
+            otherSelector="#other-editorial-group"
+            />
+            , document.getElementById('editorial')
+    );
+
+    React.render(<Select
+            model="vehicle"
+            first="{{ strtoupper(t('paragraphs.select-a-vehicle')) }}"
+            last="({{ strtolower(t('captions.other')) }})"
+            otherSelector="#other-vehicle-group"
+            />
+            , document.getElementById('vehicle')
+    );
+
+    React.render(<Select
+            model="locality"
+            first="{{ strtoupper(t('paragraphs.select-a-locality')) }}"
+            last="({{ strtolower(t('captions.other')) }})"
+            otherSelector="#other-locality-group"
+            />
+            , document.getElementById('locality')
+    );
 @stop
