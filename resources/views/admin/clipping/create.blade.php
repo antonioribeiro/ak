@@ -40,7 +40,7 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label>{{'captions.article'}}</label>
-                                        <div id="body-react">
+                                        <div id="post-body">
 
                                         </div>
                                     </div>
@@ -48,7 +48,7 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label>{{'captions.preview'}}</label>
-                                        <div id="body-preview-react" class="editor-background">
+                                        <div id="post-body-preview" class="editor-background">
 
                                         </div>
                                     </div>
@@ -59,6 +59,7 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label>{{'captions.editorial'}}</label>
+
                                         <select class="form-control">
                                             <option>ESCOLHA UMA OPÇÃO</option>
                                             <option>Política</option>
@@ -214,6 +215,9 @@
 @stop
 
 @section('reactjs')
-    @include('admin.clipping.body')
-    @include('admin.clipping.body-preview')
+    @include('javascript.reactjs.markdown-editor')
+    @include('javascript.reactjs.markdown-preview')
+
+    React.render(<MarkdownEditor />, document.getElementById('post-body'));
+    React.render(<MarkdownPreview />, document.getElementById('post-body-preview'));
 @stop

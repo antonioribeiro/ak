@@ -1,4 +1,4 @@
-var Body = React.createClass(
+var MarkdownEditor = React.createClass(
 {
     getInitialState: function()
     {
@@ -18,7 +18,7 @@ var Body = React.createClass(
             value: event.target.value
         });
 
-        EventSystem.fire('clipping.body.changed', { value: event.target.value });
+        EventSystem.fire('markdown.editor.changed', { value: event.target.value });
     },
 
     render: function() {
@@ -32,4 +32,4 @@ var Body = React.createClass(
     }
 });
 
-React.render(<Body />, document.getElementById('body-react'));
+

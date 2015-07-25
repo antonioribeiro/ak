@@ -106,11 +106,11 @@
 
     <!-- Code -->
 
-    @yield('javascript')
-
     <script type="text/jsx">
         @include('javascript.reactjs.event-system')
 
         @yield('reactjs')
     </script>
+
+    @yield('javascript')
 @stop
