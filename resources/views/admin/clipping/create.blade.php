@@ -201,3 +201,7 @@
         autosize(document.querySelectorAll('textarea'));
     </script>
 @stop
+
+@section('reactjs')
+    @include('admin.clipping.body')
+@stop
