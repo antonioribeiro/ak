@@ -3,6 +3,7 @@
   "dependencies": {
     "startbootstrap-sb-admin-2": "~1.0.7",
     "dropzone": "~4.0.1",
-    "autosize": "~3.0.8"
+    "autosize": "~3.0.8",
+    "react": "~0.13.3"
   }
 }
