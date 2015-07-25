@@ -22,7 +22,7 @@
                                 <div class="col-sm-2">
                                     <div class="form-group">
                                         <label>{{'captions.published-at'}}</label>
-                                        <input class="form-control">
+                                        <input id="published_at" class="form-control" data-providexxx="datepicker">
                                     </div>
                                 </div>
                             </div>
@@ -48,7 +48,7 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label>{{'captions.preview'}}</label>
-                                        <div id="body-preview-react">
+                                        <div id="body-preview-react" class="editor-background">
 
                                         </div>
                                     </div>
@@ -198,11 +198,18 @@
             }
         });
 
-
         var dzSnapshotImage = new Dropzone("div#snapshot-image", { url: "/file/post" });
         var dzOtherImages = new Dropzone("div#other-images", { url: "/file/post" });
 
         autosize(document.querySelectorAll('textarea'));
+
+        $('#published_at').datepicker({
+            autoclose: true,
+            todayHighlight: true,
+            format: "dd/mm/yyyy",
+            todayBtn: true,
+            language: "pt-BR"
+        });
     </script>
 @stop
 

@@ -1,15 +1,15 @@
 var BodyPreview = React.createClass(
 {
-    getInitialState: function()
-    {
-        return {
-            value: ''
-        };
-    },
-
     _changed: function(data)
     {
-        $.ajax(
+        if ( ! data.value)
+        {
+            jQuery('.body-preview-summernote').code('    ');
+
+            return;
+        }
+
+        jQuery.ajax(
         {
             type: "POST",
 
@@ -21,27 +21,26 @@ var BodyPreview = React.createClass(
             {
                 console.log(response);
 
-                this.setState({
-                    value: response.html
-                });
+                jQuery('.body-preview-summernote').code(response.html);
             }.bind(this)
         });
     },
 
     componentDidMount: function()
     {
+        jQuery('.body-preview-summernote').summernote({
+            airMode: true
+        });
+
         EventSystem.listen('clipping.body.changed', this._changed);
     },
 
     render: function() {
-        return <div>
-                <textarea
-                    className="form-control"
-                    rows="3"
-                    value={this.state.value}
-                    disabled="disabled">
-                </textarea>
-        </div>;
+        return (
+            <div>
+                <div className="body-preview-summernote"></div>
+            </div>
+        );
     }
 });
 

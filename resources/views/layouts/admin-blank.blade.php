@@ -1,8 +1,17 @@
 @extends('pragmarx/sdk::html')
 
 @section('html.head')
+    <!-- jQuery -->
+    <script type='text/javascript' src='//code.jquery.com/jquery-2.1.4.js'></script>
+
+    <!-- Datepicker -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.1/css/datepicker3.css">
+    <script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/js/bootstrap-datepicker.js"></script>
+    <script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/locales/bootstrap-datepicker.pt-BR.min.js"></script>
+
     <!-- Bootstrap Core CSS -->
-    <link href="{{url('/')}}/vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script type='text/javascript' src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 
     <!-- MetisMenu CSS -->
     <link href="{{url('/')}}/vendor/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
@@ -36,6 +45,9 @@
     <link href="{{url('/')}}/vendor/summernote/dist/summernote.css" type="text/css">
     <link href="{{url('/')}}/vendor/summernote/dist/summernote-bs3.css" type="text/css">
 
+    {{--<!-- Datepicker -->--}}
+    {{--<link href="http://eternicode.github.io/bootstrap-datepicker/bootstrap-datepicker/css/datepicker3.css" type="text/css">--}}
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -51,11 +63,11 @@
 
     @yield('body.footer')
 
-    <!-- jQuery -->
-    <script src="{{url('/')}}/vendor/jquery/dist/jquery.min.js"></script>
+    {{--<!-- jQuery -->--}}
+    {{--<script src="{{url('/')}}/vendor/jquery/dist/jquery.min.js"></script>--}}
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="{{url('/')}}/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    {{--<!-- Bootstrap Core JavaScript -->--}}
+    {{--<script src="{{url('/')}}/vendor/bootstrap/dist/js/bootstrap.min.js"></script>--}}
 
     <!-- Morris Charts JavaScript -->
     <script src="{{url('/')}}/vendor/raphael/raphael-min.js"></script>
@@ -76,8 +88,11 @@
     <!-- Custom Theme JavaScript -->
     <script src="{{url('/')}}/vendor/startbootstrap-sb-admin-2/dist/js/sb-admin-2.js"></script>
 
-    <!-- Custom Theme JavaScript -->
+    <!-- Dropzone -->
     <script src="{{url('/')}}/vendor/dropzone/dist/dropzone.js"></script>
+    <script>
+        Dropzone.autoDiscover = false;
+    </script>
 
     <!-- autosize -->
     <script src="{{url('/')}}/vendor/autosize/dist/autosize.min.js"></script>
@@ -89,9 +104,7 @@
     <!-- summernote -->
     <script src="{{url('/')}}/vendor/summernote/dist/summernote.min.js"></script>
 
-    <script>
-        Dropzone.autoDiscover = false;
-    </script>
+    <!-- Code -->
 
     @yield('javascript')
 
