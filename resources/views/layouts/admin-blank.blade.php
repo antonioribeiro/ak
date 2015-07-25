@@ -78,9 +78,19 @@
     <!-- autosize -->
     <script src="{{url('/')}}/vendor/autosize/dist/autosize.min.js"></script>
 
+    <!-- react -->
+    <script src="{{url('/')}}/vendor/react/react-with-addons.min.js"></script>
+    <script src="{{url('/')}}/vendor/react/JSXTransformer.js"></script>
+
     <script>
         Dropzone.autoDiscover = false;
     </script>
 
     @yield('javascript')
+
+    <script type="text/jsx">
+        @include('javascript.reactjs.event-system')
+
+        @yield('reactjs')
+    </script>
 @stop
