@@ -4,6 +4,7 @@
     "startbootstrap-sb-admin-2": "~1.0.7",
     "dropzone": "~4.0.1",
     "autosize": "~3.0.8",
-    "react": "~0.13.3"
+    "react": "~0.13.3",
+    "summernote": "~0.6.13"
   }
 }

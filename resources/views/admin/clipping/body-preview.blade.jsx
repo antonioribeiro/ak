@@ -9,11 +9,23 @@ var BodyPreview = React.createClass(
 
     _changed: function(data)
     {
-        this.setState({
-            value: data.value
-        });
+        $.ajax(
+        {
+            type: "POST",
 
-        //$.post
+            url: 'http://local.ak.com/api/v1/markdown/tohtml',
+
+            data: { markdown: data.value },
+
+            success: function(response)
+            {
+                console.log(response);
+
+                this.setState({
+                    value: response.html
+                });
+            }.bind(this)
+        });
     },
 
     componentDidMount: function()
@@ -26,7 +38,8 @@ var BodyPreview = React.createClass(
                 <textarea
                     className="form-control"
                     rows="3"
-                    value={this.state.value}>
+                    value={this.state.value}
+                    disabled="disabled">
                 </textarea>
         </div>;
     }

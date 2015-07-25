@@ -32,6 +32,10 @@
     <!-- Dropzone -->
     <link href="{{url('/')}}/css/admin.css" rel="stylesheet" type="text/css">
 
+    <!-- Summernote -->
+    <link href="{{url('/')}}/vendor/summernote/dist/summernote.css" type="text/css">
+    <link href="{{url('/')}}/vendor/summernote/dist/summernote-bs3.css" type="text/css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -81,6 +85,9 @@
     <!-- react -->
     <script src="{{url('/')}}/vendor/react/react-with-addons.min.js"></script>
     <script src="{{url('/')}}/vendor/react/JSXTransformer.js"></script>
+
+    <!-- summernote -->
+    <script src="{{url('/')}}/vendor/summernote/dist/summernote.min.js"></script>
 
     <script>
         Dropzone.autoDiscover = false;
