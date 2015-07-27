@@ -25,7 +25,7 @@ class Select extends Controller
 	{
 		$model = $this->selectModel($model);
 
-		dd( with(new $model)->all()->lists('name', 'id')->toArray() );
+		return with(new $model)->all()->lists('name', 'id')->toArray();
 	}
 
 	private function selectModel($model)
