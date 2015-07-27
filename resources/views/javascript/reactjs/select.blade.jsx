@@ -60,14 +60,31 @@ var Select = React.createClass(
         }
     },
 
+    _makeOption: function (index, value)
+    {
+        //console.log(index);
+        //console.log(value);
+        return (<option value={index}>{value}</option>);
+    },
+
     render: function()
     {
         var items = this.state.items;
 
         var optionNodes = Object.keys(items).map(function(value, index)
         {
-            return <option value={value}>{items[value]}</option>;
-        });
+            return this._makeOption(value, items[value]);
+        }.bind(this));
+
+        if (this.props.first)
+        {
+            optionNodes.unshift(this._makeOption(0, this.props.first));
+        }
+
+        if (this.props.last)
+        {
+            optionNodes.push(this._makeOption(9999, this.props.last));
+        }
 
         return (
             <div>
