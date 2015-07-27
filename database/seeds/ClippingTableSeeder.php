@@ -92,7 +92,7 @@ class ClippingTableSeeder extends Seeder
 			$vehicle = ClippingVehicle::firstOrCreate(['name' => $vehicle]);
 		}
 
-		if ($category = $parts[6])
+		if ($category = $parts[5])
 		{
 			$category = ClippingCategory::firstOrCreate(['name' => $category]);
 		}
