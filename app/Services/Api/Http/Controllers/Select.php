@@ -3,35 +3,48 @@
 namespace App\Services\Api\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use PragmaRX\Sdk\Services\Clipping\Data\Entities\ClippingCategory;
+use PragmaRX\Sdk\Services\Clipping\Data\Entities\ClippingLocality;
+use PragmaRX\Sdk\Services\Clipping\Data\Entities\ClippingVehicle;
 
 class Select extends Controller
 {
-	public function allFrom($model = null, $first = null, $last = null)
+	public function allFrom($model = null)
 	{
-		return $this->result(
-			[
-				1 => 'a',
-				2 => 'b'
-			],
-            $first,
-            $last
-		);
+		return $this->result($this->getAllFromModel($model));
 	}
 
-	private function result($result, $first, $last)
+	private function result($result)
 	{
-		if ($first)
-		{
-			$result = array_merge([0 => $first], $result);
-		}
-
-		if ($last)
-		{
-			$result[9999] = $last;
-		}
-
 		return [
 			'items' => $result
 		];
+	}
+
+	private function getAllFromModel($model)
+	{
+		$model = $this->selectModel($model);
+
+		dd( with(new $model)->all()->lists('name', 'id')->toArray() );
+	}
+
+	private function selectModel($model)
+	{
+		if ($model == 'locality')
+		{
+			return ClippingLocality::class;
+		}
+
+		if ($model == 'vehicle')
+		{
+			return ClippingVehicle::class;
+		}
+
+		if ($model == 'editorial')
+		{
+			return ClippingCategory::class;
+		}
+
+		return null;
 	}
 }
