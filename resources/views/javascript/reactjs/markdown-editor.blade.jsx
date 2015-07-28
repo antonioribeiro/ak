@@ -26,6 +26,7 @@ var MarkdownEditor = React.createClass(
                 <textarea
                     className="form-control"
                     rows="3"
+                    name={this.props.name}
                     onChange={this._handleChange}>
                 </textarea>
         </div>;

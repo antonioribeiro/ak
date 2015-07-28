@@ -3,6 +3,7 @@
 @section('html.head')
     <!-- jQuery -->
     <script type='text/javascript' src='//code.jquery.com/jquery-2.1.4.js'></script>
+    <script type='text/javascript' src='//ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js'></script>
 
     <!-- Datepicker -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.1/css/datepicker3.css">

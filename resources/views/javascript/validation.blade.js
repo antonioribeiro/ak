@@ -2,19 +2,23 @@ var transitionToNewContent = function(container, new_content)
 {
     container.fadeOut(500, function()
     {
-        $(this).empty().append(new_content).fadeIn(300);
+        jQuery(this).empty().append(new_content).fadeIn(300);
     });
 };
 
 function validationObserver(formSelector, buttonSelector, messagesSelector)
 {
-    jQuery(formSelector).validate();
+    var form = jQuery(formSelector);
+
+    form.validate();
+
+    console.log(form);
 
     jQuery(buttonSelector).click(function()
     {
-        if (jQuery(formSelector).valid())
+        if (form.valid())
         {
-            validateFormOnServer(formSelector, messagesSelector)
+            validateFormOnServer(formSelector, messagesSelector);
         }
     });
 }
@@ -23,9 +27,11 @@ function validateFormOnServer(formSelector, messagesSelector)
 {
     var href = jQuery(formSelector).attr('action') + '/validate';
 
-    if ($('.summernote').length)
+    var summernote = jQuery('.summernote');
+
+    if (summernote.length)
     {
-        $('.summernote').val($('.summernote').code());
+        summernote.val(summernote.code());
     }
 
     success = jQuery.post(href, jQuery(formSelector).serialize())
@@ -51,9 +57,11 @@ function displayErrorMessages(data, messagesSelector)
 
     transitionToNewContent(jQuery(messagesSelector), newContent);
 
-    jQuery('a[dismissable]').unbind('click');
+    dismissable = jQuery('a[dismissable]');
 
-    jQuery('a[dismissable]').click(function(evnt)
+    dismissable.unbind('click');
+
+    dismissable.click(function(evnt)
     {
         jQuery(this).hide('fast');
     });

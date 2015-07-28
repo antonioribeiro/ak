@@ -78,7 +78,7 @@ var Select = React.createClass(
 
         if (this.props.first)
         {
-            optionNodes.unshift(this._makeOption(0, this.props.first));
+            optionNodes.unshift(this._makeOption('', this.props.first));
         }
 
         if (this.props.last)
@@ -88,7 +88,7 @@ var Select = React.createClass(
 
         return (
             <div>
-                <select className="form-control" onChange={this._change}>
+                <select name={this.props.name} className="form-control" onChange={this._change}>
                     { optionNodes }
                 </select>
             </div>

@@ -8,37 +8,38 @@
             </h1>
 
             <div class="panel-body">
+                <div id="messages"></div>
                 <div class="row">
                     <div class="col-lg-12">
-                        <form role="form">
+                        {!! Form::opener(['route' => 'admin.clipping.store', 'id' => 'create-clipping-form']) !!}
                             <div class="row">
                                 <div class="col-sm-10">
                                     <div class="form-group">
                                         <label>{{'captions.article-url'}}</label>
-                                        <input class="form-control">
+                                        <input type="text" name="url" class="form-control">
                                     </div>
                                 </div>
 
                                 <div class="col-sm-2">
                                     <div class="form-group">
                                         <label>{{'captions.published-at'}}</label>
-                                        <input id="published_at" class="form-control" data-providexxx="datepicker">
+                                        <input type="text" name="published_at" id="published_at" class="form-control" data-providexxx="datepicker">
                                     </div>
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label>{{'captions.heading'}}</label>
-                                <input class="form-control">
+                                <input type="text" name="heading" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label>{{'captions.subheading'}}</label>
-                                <input class="form-control">
+                                <input type="text" name="subheading" class="form-control">
                             </div>
 
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <div class="form-group">
+                                    <div class="-group">
                                         <label>{{'captions.article'}}</label>
                                         <div id="post-body">
 
@@ -66,7 +67,7 @@
                                 <div class="col-sm-6">
                                     <div class="form-group" id="other-editorial-group">
                                         <label>{{'captions.editorial'}} ({{'captions.create'}})</label>
-                                        <input class="form-control">
+                                        <input type="text" name="editorial_other" class="form-control">
                                     </div>
                                 </div>
                             </div>
@@ -82,13 +83,13 @@
                                 <div class="col-sm-6">
                                     <div class="form-group" id="other-vehicle-group">
                                         <label>{{'captions.vehicle'}} ({{'captions.create'}})</label>
-                                        <input class="form-control">
+                                        <input type="text" name="vehicle_other" class="form-control">
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label>{{'captions.author'}}</label>
-                                <input class="form-control">
+                                <input type="text" name="author" class="form-control">
                             </div>
 
                             <div class="row">
@@ -102,61 +103,64 @@
                                 <div class="col-sm-6">
                                     <div class="form-group" id="other-locality-group">
                                         <label>{{'captions.locality'}} ({{'captions.create'}})</label>
-                                        <input class="form-control">
+                                        <input type="text" name="locality_other" class="form-control">
                                     </div>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-sm-4">
+                                    {{--<div class="form-group">--}}
+                                        {{--<label>{{'captions.image-main'}}</label>--}}
+                                        {{--<div id="main-image" class="dropzone dz-clickable">--}}
+                                            {{--<div class="dz-message">--}}
+                                                {{--{{'paragraphs.drop-here-or-click'}}<br>--}}
+                                            {{--</div>--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
                                     <div class="form-group">
                                         <label>{{'captions.image-main'}}</label>
-                                        <div id="main-image" class="dropzone dz-clickable">
-                                            <div class="dz-message">
-                                                {{'paragraphs.drop-here-or-click'}}<br>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>{{'paragraphs.paste-urls-here'}}</label>
-                                        <textarea class="form-control" rows="3"></textarea>
+                                        {{--<label>{{'paragraphs.paste-urls-here'}}</label>--}}
+                                        <textarea name="image_main_urls" class="form-control" rows="3"></textarea>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-4">
+                                    {{--<div class="form-group">--}}
+                                        {{--<label>{{'captions.image-snapshot'}}</label>--}}
+                                        {{--<div id="snapshot-image" class="dropzone dz-clickable">--}}
+                                            {{--<div class="dz-message">--}}
+                                                {{--{{'paragraphs.drop-here-or-click'}}<br>--}}
+                                            {{--</div>--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
                                     <div class="form-group">
                                         <label>{{'captions.image-snapshot'}}</label>
-                                        <div id="snapshot-image" class="dropzone dz-clickable">
-                                            <div class="dz-message">
-                                                {{'paragraphs.drop-here-or-click'}}<br>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>{{'paragraphs.paste-urls-here'}}</label>
-                                        <textarea class="form-control" rows="3"></textarea>
+                                        {{--<label>{{'paragraphs.paste-urls-here'}}</label>--}}
+                                        <textarea name="image_snapshot_urls"class="form-control" rows="3"></textarea>
                                     </div>
                                 </div>
 
                                 <div class="col-sm-4">
+                                    {{--<div class="form-group">--}}
+                                        {{--<label>{{'captions.image_other'}}</label>--}}
+                                        {{--<div id="other-images" class="dropzone dz-clickable">--}}
+                                            {{--<div class="dz-message">--}}
+                                                {{--{{'paragraphs.drop-here-or-click'}}<br>--}}
+                                            {{--</div>--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
                                     <div class="form-group">
                                         <label>{{'captions.image-other'}}</label>
-                                        <div id="other-images" class="dropzone dz-clickable">
-                                            <div class="dz-message">
-                                                {{'paragraphs.drop-here-or-click'}}<br>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>{{'paragraphs.paste-urls-here'}}</label>
-                                        <textarea class="form-control" rows="3"></textarea>
+                                        {{--<label>{{'paragraphs.paste-urls-here'}}</label>--}}
+                                        <textarea name="image_other_urls" class="form-control" rows="3"></textarea>
                                     </div>
                                 </div>
                             </div>
 
-                            <button type="submit" class="btn btn-primary">{{'captions.save'}}</button>
+                            <div type="submit" id="btn-save" class="btn btn-primary">{{'captions.save'}}</div>
                             <a href="{{ route('admin.home') }}" type="reset" class="btn btn-danger">{{'captions.cancel'}}</a>
-                        </form>
+                        {!! Form::close() !!}
                     </div>
                     <!-- /.col-lg-6 (nested) -->
                 </div>
@@ -170,17 +174,19 @@
 
 @section('javascript')
     <script>
-        var dzMainImage = new Dropzone("div#main-image",
-        {
-            url: "/file/post",
+        @include('javascript.validation');
 
-            dragend: function(event) {
-                console.log(event);
-            }
-        });
-
-        var dzSnapshotImage = new Dropzone("div#snapshot-image", { url: "/file/post" });
-        var dzOtherImages = new Dropzone("div#other-images", { url: "/file/post" });
+//        var dzMainImage = new Dropzone("div#main-image",
+//        {
+//            url: "/file/post",
+//
+//            dragend: function(event) {
+//                console.log(event);
+//            }
+//        });
+//
+//        var dzSnapshotImage = new Dropzone("div#snapshot-image", { url: "/file/post" });
+//        var dzOtherImages = new Dropzone("div#other-images", { url: "/file/post" });
 
         autosize(document.querySelectorAll('textarea'));
 
@@ -191,6 +197,8 @@
             todayBtn: true,
             language: "pt-BR"
         });
+
+        validationObserver('#create-clipping-form', '#btn-save', '#messages');
     </script>
 @stop
 
@@ -199,11 +207,12 @@
     @include('javascript.reactjs.markdown-preview')
     @include('javascript.reactjs.select')
 
-    React.render(<MarkdownEditor />, document.getElementById('post-body'));
+    React.render(<MarkdownEditor name="body"/>, document.getElementById('post-body'));
 
     React.render(<MarkdownPreview />, document.getElementById('post-body-preview'));
 
     React.render(<Select
+            name="editorial_id"
             model="editorial"
             first="{{ strtoupper(t('paragraphs.select-an-editorial')) }}"
             last="({{ strtolower(t('captions.other')) }})"
@@ -213,6 +222,7 @@
     );
 
     React.render(<Select
+            name="vehicle_id"
             model="vehicle"
             first="{{ strtoupper(t('paragraphs.select-a-vehicle')) }}"
             last="({{ strtolower(t('captions.other')) }})"
@@ -222,6 +232,7 @@
     );
 
     React.render(<Select
+            name="locality_id"
             model="locality"
             first="{{ strtoupper(t('paragraphs.select-a-locality')) }}"
             last="({{ strtolower(t('captions.other')) }})"

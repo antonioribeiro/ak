@@ -31,6 +31,9 @@ Route::group(['middleware' => 'auth', 'prefix' => 'beta'], function()
 		Route::group(['prefix' => 'clipping'], function()
 		{
 			Route::get('create', ['as' => 'admin.clipping.create', 'uses' => 'Clipping@create']);
+
+			Route::post('store', ['as' => 'admin.clipping.store', 'uses' => 'Clipping@store']);
+
 			Route::get('edit', ['as' => 'admin.clipping.edit', 'uses' => 'Clipping@edit']);
 			Route::get('delete', ['as' => 'admin.clipping.delete', 'uses' => 'Clipping@delete']);
 		});
