@@ -33,6 +33,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'beta'], function()
 			Route::get('create', ['as' => 'admin.clipping.create', 'uses' => 'Clipping@create']);
 
 			Route::post('store', ['as' => 'admin.clipping.store', 'uses' => 'Clipping@store']);
+			Route::post('store/validate', ['as' => 'admin.clipping.store.validate', 'uses' => 'Clipping@storeValidate']);
 
 			Route::get('edit', ['as' => 'admin.clipping.edit', 'uses' => 'Clipping@edit']);
 			Route::get('delete', ['as' => 'admin.clipping.delete', 'uses' => 'Clipping@delete']);
