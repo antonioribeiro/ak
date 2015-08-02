@@ -42,7 +42,7 @@ return [
 
 		'Services/Billing',
 		'Services/Block',
-		'Services/Bus',
+//		'Services/Bus', // this is a package
 
 		'Services/Cities',
 //		'Services/Clients',
@@ -104,6 +104,13 @@ return [
 			'enabled' => true,
 			'serviceProviders' => ['PragmaRX\Sdk\Services\Push\Service\Provider'],
 			'facades' => ['Push' => 'PragmaRX\Sdk\Services\Push\Service\Facade']
+		],
+
+		[
+			'name' => 'pragmarx/bus',
+			'enabled' => true,
+			'serviceProviders' => ['PragmaRX\Sdk\Services\Bus\Service\Provider'],
+			'facades' => []
 		],
 
 		[
