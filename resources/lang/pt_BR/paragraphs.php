@@ -42,4 +42,5 @@ return array (
 	'select-a-locality' => 'Selecione uma localidade',
 	'select-an-editorial' => 'Selecione uma editoria',
 	'select-a-vehicle' => 'Selecione um veículo',
+	'article-was-added' => 'O artigo foi adicionado',
 );
