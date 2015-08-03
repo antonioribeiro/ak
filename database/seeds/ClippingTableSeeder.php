@@ -193,6 +193,7 @@ class ClippingTableSeeder extends Seeder
 			);
 			return $clipping;
 		}
+
 		return $clipping;
 	}
 }
