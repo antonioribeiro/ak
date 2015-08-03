@@ -2,6 +2,7 @@
 
 namespace App\Services\Admin\Http\Controllers;
 
+use Carbon\Carbon;
 use PragmaRX\Sdk\Core\Controller;
 use App\Services\Admin\Http\Requests\ClippingStore;
 use PragmaRX\Sdk\Services\Clipping\Commands\AddClipping as AddClippingCommand;
@@ -21,7 +22,9 @@ class Clipping extends Controller
 
 	public function create()
 	{
-		return view('admin.clipping.create');
+		return
+			view('admin.clipping.create')
+				->with('today_date', Carbon::now()->format('m-d-Y'));
 	}
 
 	public function store(ClippingStore $request)

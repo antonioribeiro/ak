@@ -195,6 +195,7 @@
             todayHighlight: true,
             format: "dd/mm/yyyy",
             todayBtn: true,
+            endDate: "{{ $today_date }}",
             language: "pt-BR"
         });
 
