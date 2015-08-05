@@ -122,7 +122,7 @@
                             </div>
 
                             <div class="row">
-                                <div class="col-sm-4">
+                                <div class="col-sm-6">
                                     {{--<div class="form-group">--}}
                                         {{--<label>{{'captions.image-main'}}</label>--}}
                                         {{--<div id="main-image" class="dropzone dz-clickable">--}}
@@ -138,7 +138,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-sm-4">
+                                <div class="col-sm-6">
                                     {{--<div class="form-group">--}}
                                         {{--<label>{{'captions.image-snapshot'}}</label>--}}
                                         {{--<div id="snapshot-image" class="dropzone dz-clickable">--}}
@@ -153,8 +153,10 @@
                                         <textarea name="image_snapshot_urls"class="form-control" rows="3"></textarea>
                                     </div>
                                 </div>
+                            </div>
 
-                                <div class="col-sm-4">
+                            <div class="row">
+                                <div class="col-sm-6">
                                     {{--<div class="form-group">--}}
                                         {{--<label>{{'captions.image_other'}}</label>--}}
                                         {{--<div id="other-images" class="dropzone dz-clickable">--}}
@@ -165,8 +167,22 @@
                                     {{--</div>--}}
                                     <div class="form-group">
                                         <label>{{'captions.image-other'}}</label>
-                                        {{--<label>{{'paragraphs.paste-urls-here'}}</label>--}}
                                         <textarea name="image_other_urls" class="form-control" rows="3"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    {{--<div class="form-group">--}}
+                                    {{--<label>{{'captions.image_other'}}</label>--}}
+                                    {{--<div id="other-images" class="dropzone dz-clickable">--}}
+                                    {{--<div class="dz-message">--}}
+                                    {{--{{'paragraphs.drop-here-or-click'}}<br>--}}
+                                    {{--</div>--}}
+                                    {{--</div>--}}
+                                    {{--</div>--}}
+                                    <div class="form-group">
+                                        <label>{{'captions.videos'}}</label>
+                                        <textarea name="videos" class="form-control" rows="3"></textarea>
                                     </div>
                                 </div>
                             </div>
