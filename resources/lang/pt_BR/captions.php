@@ -52,4 +52,5 @@ return array (
 	'image-other' => 'Outras Imagens',
 	'other' => 'Outro',
 	'tags' => 'Tags',
+	'videos' => 'Videos',
 );
