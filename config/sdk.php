@@ -120,12 +120,12 @@ return [
 			'facades' => ['ExceptionHandler' => 'PragmaRX\Sdk\Services\ExceptionHandler\Service\Facade']
 		],
 
-		[
-			'name' => 'pragmarx/redirect',
-			'enabled' => true,
-			'serviceProviders' => ['PragmaRX\Sdk\Services\Redirect\Service\Provider'],
-			'facades' => []
-		],
+//		[
+//			'name' => 'pragmarx/redirect',
+//			'enabled' => true,
+//			'serviceProviders' => ['PragmaRX\Sdk\Services\Redirect\Service\Provider'],
+//			'facades' => []
+//		],
 
 		[
 			'name' => 'pragmarx/google2fa',
