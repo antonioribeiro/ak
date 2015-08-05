@@ -153,6 +153,7 @@ class ClippingTableSeeder extends Seeder
 				$clipping,
 				false,
 				false,
+				true,
 				$parts[11],
 				ClippingFileType::firstorCreate(['name' => 'video'])
 			);
@@ -169,6 +170,7 @@ class ClippingTableSeeder extends Seeder
 				$file = $clippingFile->createFor(
 					$clipping,
 					$isMainFile,
+					false,
 					false,
 					$parts[$counter],
 					ClippingFileType::firstorCreate(['name' => 'image'])
@@ -188,6 +190,7 @@ class ClippingTableSeeder extends Seeder
 				$clipping,
 				false,
 				true, /// this is the snapshot
+				false,
 				$file,
 				ClippingFileType::firstorCreate(['name' => 'image'])
 			);
