@@ -46,6 +46,16 @@
     <link href="{{url('/')}}/vendor/summernote/dist/summernote.css" type="text/css">
     <link href="{{url('/')}}/vendor/summernote/dist/summernote-bs3.css" type="text/css">
 
+    <!-- tags input -->
+    <link href="http://timschlechter.github.io/bootstrap-tagsinput/examples/lib/bootstrap-3/dist/css/bootstrap-theme.min.css" type="text/css">
+    <link href="{{url('/')}}/vendor/bootstrap-tagsinput/dist/bootstrap-tagsinput.css" type="text/css">
+
+    <!-- tags input -->
+    <link href="{{url('/')}}/css/app.css" type="text/css">
+
+    <link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
+
     {{--<!-- Datepicker -->--}}
     {{--<link href="http://eternicode.github.io/bootstrap-datepicker/bootstrap-datepicker/css/datepicker3.css" type="text/css">--}}
 

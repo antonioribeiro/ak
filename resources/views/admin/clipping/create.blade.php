@@ -109,6 +109,19 @@
                             </div>
 
                             <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label>{{'captions.tags'}}</label>
+                                        <select multiple="true" name="tags[]" id="tags" class="form-control select2">
+                                            @foreach ($tags as $tag)
+                                                <option value="{{ $tag }}">{{ $tag }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
                                 <div class="col-sm-4">
                                     {{--<div class="form-group">--}}
                                         {{--<label>{{'captions.image-main'}}</label>--}}
@@ -190,7 +203,7 @@
 
         autosize(document.querySelectorAll('textarea'));
 
-        $('#published_at').datepicker({
+        jQuery('#published_at').datepicker({
             autoclose: true,
             todayHighlight: true,
             format: "dd/mm/yyyy",
@@ -200,6 +213,25 @@
         });
 
         validationObserver('#create-clipping-form', '#btn-save', '#messages');
+
+//        var tags = new Bloodhound({
+//            datumTokenizer: Bloodhound.tokenizers.obj.whitespace('name'),
+//            queryTokenizer: Bloodhound.tokenizers.whitespace,
+//            prefetch: {
+//                url: 'assets/citynames.json',
+//                filter: function(list) {
+//                    return $.map(list, function(cityname) {
+//                        return { name: cityname }; });
+//                }
+//            }
+//        });
+//
+//        citynames.initialize();
+
+        $('#tags').select2({
+            tags: true,
+            tokenSeparators: [",", " "]
+        });
     </script>
 @stop
 
