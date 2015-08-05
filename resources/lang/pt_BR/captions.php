@@ -51,4 +51,5 @@ return array (
 	'image-snapshot' => 'Instantâneo',
 	'image-other' => 'Outras Imagens',
 	'other' => 'Outro',
+	'tags' => 'Tags',
 );
