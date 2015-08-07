@@ -19,6 +19,8 @@ class Admin extends Controller
 
 	public function index()
 	{
+		$posts = $this->clippingRepository->paginated();
+
 		return view('admin.index')
 				->with('posts', $this->clippingRepository->paginated());
 	}

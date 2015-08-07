@@ -43,9 +43,9 @@
                                         <tr>
                                             <td>{{ $post->published_at->format('d/m/Y') }}</td>
                                             <td>{{ $post->heading }}</td>
-                                            <td>{{ $post->category->name }}</td>
-                                            <td>{{ $post->locality->name }}</td>
-                                            <td>{{ $post->vehicle->name }}</td>
+                                            <td>{{ $post->category ? $post->category->name : '' }}</td>
+                                            <td>{{ $post->locality ? $post->locality->name : '' }}</td>
+                                            <td>{{ $post->vehicle ? $post->vehicle->name : '' }}</td>
                                             <td>
                                                 <div class="row">
                                                     <div class="col-sm-2">
