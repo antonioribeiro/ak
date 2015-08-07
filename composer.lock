@@ -977,12 +977,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "251e7240c30ac5721bad2cfce3ebc35b5f52b78c"
+                "reference": "a267fa6255275b0715ca78a6ed92a47b3d78b65d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/251e7240c30ac5721bad2cfce3ebc35b5f52b78c",
-                "reference": "251e7240c30ac5721bad2cfce3ebc35b5f52b78c",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/a267fa6255275b0715ca78a6ed92a47b3d78b65d",
+                "reference": "a267fa6255275b0715ca78a6ed92a47b3d78b65d",
                 "shasum": ""
             },
             "require": {
@@ -1097,7 +1097,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-08-04 02:21:09"
+            "time": "2015-08-06 18:39:16"
         },
         {
             "name": "laravel/socialite",
@@ -1860,12 +1860,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antonioribeiro/sdk.git",
-                "reference": "87a1e7646c1fae414a370ad65012208676957952"
+                "reference": "ff0de7098eb5fd0c8c5f08e18897101acf7dbf53"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antonioribeiro/sdk/zipball/87a1e7646c1fae414a370ad65012208676957952",
-                "reference": "87a1e7646c1fae414a370ad65012208676957952",
+                "url": "https://api.github.com/repos/antonioribeiro/sdk/zipball/ff0de7098eb5fd0c8c5f08e18897101acf7dbf53",
+                "reference": "ff0de7098eb5fd0c8c5f08e18897101acf7dbf53",
                 "shasum": ""
             },
             "require": {
@@ -1918,7 +1918,7 @@
                 "source": "https://github.com/antonioribeiro/sdk/tree/master",
                 "issues": "https://github.com/antonioribeiro/sdk/issues"
             },
-            "time": "2015-08-05 01:49:23"
+            "time": "2015-08-07 18:00:58"
         },
         {
             "name": "pragmarx/support",
@@ -2046,16 +2046,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/antonioribeiro/zipcode.git",
-                "reference": "4c0c2f86e058735ee2fe099d1b83cc407332975a"
+                "reference": "2ad9c0dc8ae399e1da34a15bdaec0e8e552df37c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/antonioribeiro/zipcode/zipball/4c0c2f86e058735ee2fe099d1b83cc407332975a",
-                "reference": "4c0c2f86e058735ee2fe099d1b83cc407332975a",
+                "url": "https://api.github.com/repos/antonioribeiro/zipcode/zipball/2ad9c0dc8ae399e1da34a15bdaec0e8e552df37c",
+                "reference": "2ad9c0dc8ae399e1da34a15bdaec0e8e552df37c",
                 "shasum": ""
             },
             "require": {
-                "guzzlehttp/guzzle": "~4|~5",
+                "guzzlehttp/guzzle": "~4|~5|~6",
                 "illuminate/filesystem": "~4|~5",
                 "pragmarx/support": "~0.5"
             },
@@ -2092,7 +2092,7 @@
                 "zip",
                 "zip code"
             ],
-            "time": "2015-03-10 03:16:20"
+            "time": "2015-08-07 05:40:44"
         },
         {
             "name": "psr/log",
@@ -2795,12 +2795,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpFoundation.git",
-                "reference": "863af6898081b34c65d42100c370b9f3c51b70ca"
+                "reference": "38c326b689dda8f33223a74e30c42526c684fe2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/863af6898081b34c65d42100c370b9f3c51b70ca",
-                "reference": "863af6898081b34c65d42100c370b9f3c51b70ca",
+                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/38c326b689dda8f33223a74e30c42526c684fe2e",
+                "reference": "38c326b689dda8f33223a74e30c42526c684fe2e",
                 "shasum": ""
             },
             "require": {
@@ -2840,7 +2840,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2015-07-22 10:11:00"
+            "time": "2015-08-05 15:45:00"
         },
         {
             "name": "symfony/http-kernel",
@@ -2977,12 +2977,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Routing.git",
-                "reference": "ea9134f277162b02e5f80ac058b75a77637b0d26"
+                "reference": "71fed8c6e21f6925c67ea2d4c7365a50d1989055"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Routing/zipball/ea9134f277162b02e5f80ac058b75a77637b0d26",
-                "reference": "ea9134f277162b02e5f80ac058b75a77637b0d26",
+                "url": "https://api.github.com/repos/symfony/Routing/zipball/71fed8c6e21f6925c67ea2d4c7365a50d1989055",
+                "reference": "71fed8c6e21f6925c67ea2d4c7365a50d1989055",
                 "shasum": ""
             },
             "require": {
@@ -3040,7 +3040,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2015-07-09 16:07:40"
+            "time": "2015-08-05 15:45:00"
         },
         {
             "name": "symfony/translation",
@@ -3418,12 +3418,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "55e5560de3e669ff9f3b8bfd3c3d456796fc2e8d"
+                "reference": "5015592f93c764c48f440511f56a6c83ce744137"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/55e5560de3e669ff9f3b8bfd3c3d456796fc2e8d",
-                "reference": "55e5560de3e669ff9f3b8bfd3c3d456796fc2e8d",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/5015592f93c764c48f440511f56a6c83ce744137",
+                "reference": "5015592f93c764c48f440511f56a6c83ce744137",
                 "shasum": ""
             },
             "require": {
@@ -3462,7 +3462,7 @@
                 "faker",
                 "fixtures"
             ],
-            "time": "2015-07-24 15:39:15"
+            "time": "2015-08-06 15:02:52"
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -4041,12 +4041,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "0fe5ed323f0017624a65746153ae3fd69c308c1b"
+                "reference": "a65a36e35e2a3b38bd44ca33fcb3feb68757de12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/0fe5ed323f0017624a65746153ae3fd69c308c1b",
-                "reference": "0fe5ed323f0017624a65746153ae3fd69c308c1b",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/a65a36e35e2a3b38bd44ca33fcb3feb68757de12",
+                "reference": "a65a36e35e2a3b38bd44ca33fcb3feb68757de12",
                 "shasum": ""
             },
             "require": {
@@ -4105,7 +4105,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-08-02 08:24:28"
+            "time": "2015-08-07 13:02:15"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
