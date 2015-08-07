@@ -3,10 +3,6 @@
 @section('contents')
     <div id="blog_post">
         <div class="container">
-            <div class="section_header">
-                <h3>Artigo</h3>
-            </div>
-
             <div class="row">
                 <div class="col-sm-9">
                     <img class="post_pic img-responsive" src="{{ $post->present()->imageUrl(700,538) }}" />
