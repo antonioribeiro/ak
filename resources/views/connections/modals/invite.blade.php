@@ -10,20 +10,12 @@
                 </div>
 
                 <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="modalMessages" id="inviteModalMessages">
-                            </div>
+                    <div class="modalMessages" id="inviteModalMessages"></div>
 
-                            {!! Form::opener(['route' => 'connect.invite', 'class' => 'smart-form', 'id' => 'invite-form']) !!}
-                                <section>
-									<label class="label">{{'paragraphs.email-addresses-to-invite'}}</label>
-									<label class="textarea">
-										{!! Form::textarea('emails', null, ['id' => 'emails', 'rows' => '7', 'class' => 'custom-scroll']) !!}
-									</label>
-								</section>
-                            {!! Form::close() !!}
-                        </div>
+                    <div class="bs-example" data-example-id="textarea-form-control">
+                        {!! Form::opener(['route' => 'connect.invite', 'id' => 'invite-form']) !!}
+                            {!! Form::textarea('emails', null, ['id' => 'emails', 'rows' => '7', 'class' => 'form-control']) !!}
+                        {!! Form::close() !!}
                     </div>
                 </div>
 
