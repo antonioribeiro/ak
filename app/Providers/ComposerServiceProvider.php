@@ -53,13 +53,13 @@ class ComposerServiceProvider extends ServiceProvider {
 
 			$view->with('current_user', Auth::user());
 
-			$view->with('assets', asset('assets'));
+			$view->with('assets', asset('/'));
 
-			$view->with('assets_bower', asset('assets/vendor/bower'));
+			$view->with('assets_bower', asset('vendor'));
 
-			$view->with('assets_main', asset('assets/layouts/main'));
+			$view->with('assets_main', asset('/'));
 
-			$view->with('assets_layout', asset('assets/layouts/smartadmin/'));
+			$view->with('assets_layout', asset('/'));
 
 			$view->with('language_locale', Language::getLocale());
 
