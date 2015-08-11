@@ -8,7 +8,7 @@ return [
 
     'debug' => env('APP_DEBUG', false),
 
-    'url' => 'http://localhost',
+    'url' => env('APP_URL_BASE', 'http://politico-on.com/'),
 
     'timezone' => 'UTC',
 
