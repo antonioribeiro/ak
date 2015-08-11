@@ -1,6 +1,6 @@
 <?php
 
-namespace ConsultorioDigital\Services\Users\Data\Entities;
+namespace App\Data\Entities;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Auth\Passwords\CanResetPassword;
@@ -13,6 +13,6 @@ class User extends SdkUserModel implements AuthenticatableContract, CanResetPass
 
 	use Authenticatable, CanResetPassword, BusinessHours;
 
-	protected $presenter = 'ConsultorioDigital\Services\Users\Data\Presenters\User';
+	protected $presenter = 'App\Services\Users\Data\Presenters\User';
 
 }

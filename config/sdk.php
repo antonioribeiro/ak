@@ -209,6 +209,15 @@ return [
 		],
 
 		[
+			'name' => 'pragmarx/registration',
+			'enabled' => true,
+			'serviceProviders' => [PragmaRX\Sdk\Services\Registration\Service\Provider::class],
+			'facades' => [
+				'Registration' => PragmaRX\Sdk\Services\Registration\Service\Facade::class,
+			]
+		],
+
+		[
 			'name' => 'pragmarx/activation',
 			'enabled' => true,
 			'serviceProviders' => ['PragmaRX\Sdk\Services\Activation\Service\Provider'],

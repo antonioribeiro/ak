@@ -2,6 +2,11 @@
 
 use PragmaRX\Sdk\Services\Clipping\Data\Entities\Clipping;
 
+Route::get('invite', function()
+{
+	return Artisan::call('sdk:invite', ['email' => 'consultor@cys.com.br']);
+});
+
 Route::get('/', function()
 {
 	return view('comingsoon');
