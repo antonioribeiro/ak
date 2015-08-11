@@ -4,7 +4,7 @@ use PragmaRX\Sdk\Services\Clipping\Data\Entities\Clipping;
 
 Route::get('invite', function()
 {
-	return Artisan::call('sdk:invite', ['email' => 'consultor@cys.com.br']);
+	return Artisan::call('sdk:invite', ['email' => 'acr+'.rand(1,99999999).'@antoniocarlosribeiro.com']);
 });
 
 Route::get('/', function()

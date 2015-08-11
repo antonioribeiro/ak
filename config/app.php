@@ -2,6 +2,8 @@
 
 return [
 
+	'owner_name' => 'Antonio Carlos Ribeiro',
+
 	'name' => 'Politico On',
 
     'debug' => env('APP_DEBUG', false),

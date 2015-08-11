@@ -6,7 +6,7 @@
 
 @section('email-body')
 
-	This is a invitation to {{ $app_name_caps }}, to accept, please click the link below:<br>
+	Este é um convite para entrar no {{ $app_name_caps }}, para aceitar, por favor clique no link abaixo:<br>
 	<br>
 	{!! URL::route('connect.invite.accept', ['id' => $user->id]) !!}.
 
