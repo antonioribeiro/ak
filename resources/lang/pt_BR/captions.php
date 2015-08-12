@@ -53,4 +53,5 @@ return array (
 	'other' => 'Outro',
 	'tags' => 'Tags',
 	'videos' => 'Videos',
+	'file-name' => 'Nome do arquivo',
 );
