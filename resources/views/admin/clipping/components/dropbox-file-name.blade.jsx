@@ -3,7 +3,7 @@ var DropboxFileName = React.createClass(
     getInitialState: function()
     {
         return {
-            filename: 'Hello!'
+            filename: ''
         };
     },
 
