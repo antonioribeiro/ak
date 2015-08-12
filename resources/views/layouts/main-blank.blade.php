@@ -18,6 +18,10 @@
 
     <link rel="stylesheet" href="{{ url('/') }}/css/app.css" type="text/css" media="screen" />
 
+    <link href="path/to/css/star-rating.min.css" media="all" rel="stylesheet" type="text/css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="path/to/js/star-rating.min.js" type="text/javascript"></script>
+
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
