@@ -2,3 +2,13 @@
     text-align: justify;
     text-justify: inter-word;
 }
+
+/*.post-rating {*/
+    /*font-size: 30px;*/
+    /*padding: 2px;*/
+    /*color: #68a82b;*/
+/*}*/
+
+.cancel-on-png, .cancel-off-png, .star-on-png, .star-off-png, .star-half-png {
+    color: #68a82b;
+}

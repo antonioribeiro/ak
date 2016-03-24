@@ -52,3 +52,4 @@
         {!! $posts->render() !!}
     </div>
 @stop
+
